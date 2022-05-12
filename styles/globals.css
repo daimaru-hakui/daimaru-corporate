@@ -2,8 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: NotoSerifCJKjp, '游ゴシック体', 'Yu Gothic', YuGothic,
+    'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo,
+    sans-serif;
 }
 
 a {
@@ -13,4 +16,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+ul.slider .slick-dots {
+  bottom: 25px;
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-15%);
+}
+
+.slick-dots li button:before {
+  color: rgb(35, 137, 233) !important;
 }
