@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import styles from './Topbar.module.scss';
+import styles from './Header.module.scss';
+import Image from 'next/image';
+import { NextPage } from 'next';
+// import Logo from 'src/assets/svg/Logo.svg';
 
-export default function Topbar() {
+const Header: NextPage = () => {
   const [openMenu, setOpenMenu] = useState(true);
 
   const menuFunction = () => {
@@ -11,7 +14,14 @@ export default function Topbar() {
   return (
     <div className={styles.container}>
       <div className={styles.topbarLeft}>
-        <div className={styles.logo}>大丸白衣</div>
+        <div className={styles.logo}>
+          <Image
+            src='/logo.svg'
+            width={'250px'}
+            height={'50px'}
+            alt={'大丸白衣'}
+          />
+        </div>
       </div>
       <div className={styles.topbarRight}>
         <div className={styles.menuWrapper}>
@@ -71,4 +81,5 @@ export default function Topbar() {
       </div>
     </div>
   );
-}
+};
+export default Header;

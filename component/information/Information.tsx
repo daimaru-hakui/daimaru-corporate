@@ -1,46 +1,42 @@
+import { NextPage } from 'next';
 import React from 'react';
 import styles from './Information.module.scss';
 
-const Information = () => {
-  const lists = [
-    {
-      id: 1,
-      time: '2022.05.12',
-      category: 'お知らせ',
-      title:
-        '【重要】オハヨー公式インスタグラムの「偽アカウント（なりすまし）」にご注意ください',
-    },
-    {
-      id: 2,
-      time: '2022.04.18',
-      category: 'プレスリリース',
-      title: 'アイスクリーム 価格改定のお知らせ',
-    },
-    {
-      id: 3,
-      time: '2022.03.29',
-      category: 'プレスリリース',
-      title: '「焼プリン」 発売30周年を記念し、特設Webサイトをオープン',
-    },
-  ];
+interface Props {
+  posts: {
+    id: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    revisedAt: string;
+    title: string;
+    category: [];
+    date: string;
+  }[];
+}
+
+const Information: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <div className={styles.infoWrapper}>
         <div className={styles.infoHeading}>
           <h3>お知らせ</h3>
+          <div className={styles.infoBtn}>
+            <a href='#'>一覧へ</a>
+          </div>
         </div>
         <div className={styles.infoBody}>
           <ul className={styles.infoList}>
-            {lists.map((list) => (
-              <>
-                <li className={styles.infoListItem} key={list.id}>
-                  <time dateTime={list.time} className={styles.time}>
-                    {list.time}
-                    <i className={styles.cat}>{list.category}</i>
+            {posts.map((post) => (
+              <div key={post.id}>
+                <li className={styles.infoListItem}>
+                  <time dateTime={post.updatedAt} className={styles.time}>
+                    {post.date.substring(0, 10)}
+                    <i className={styles.cat}>{post.category}</i>
                   </time>
-                  <p className={styles.title}>{list.title}</p>
+                  <p className={styles.title}>{post.title}</p>
                 </li>
-              </>
+              </div>
             ))}
           </ul>
         </div>

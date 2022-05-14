@@ -1,8 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import Slick from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import styles from './Eyecatch.module.scss';
+import { NextPage } from 'next';
 
-export default function Eyecatch() {
+const Eyecatch: NextPage = () => {
   const settings = {
     dots: true,
     fade: true,
@@ -20,22 +23,31 @@ export default function Eyecatch() {
     <>
       <ul
         className='slider'
-        style={{ width: '100%', margin: '0', padding: '0' }}
+        style={{
+          width: '100%',
+          margin: '0',
+          padding: '0',
+          position: 'relative',
+        }}
       >
         <Slick {...settings}>
-          {imgArray.map((img) => (
-            <>
-              <li>
+          {imgArray.map((img, index) => (
+            <div key={index.toString()}>
+              <li key={index}>
                 <img
                   src={img}
-                  alt=''
+                  alt='トップイメージ'
                   style={{ width: '100%', height: '85vh', objectFit: 'cover' }}
                 />
               </li>
-            </>
+            </div>
           ))}
         </Slick>
+        <div className={styles.catchCopy}>
+          一級品のユニフォームを手頃に手軽に届けたい。
+        </div>
       </ul>
     </>
   );
-}
+};
+export default Eyecatch;
