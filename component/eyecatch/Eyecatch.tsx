@@ -21,7 +21,7 @@ const Eyecatch: NextPage = () => {
   const imgArray = ['/images/1.jpg', '/images/2.jpg', '/images/3.jpg'];
   return (
     <>
-      <ul
+      <div
         className='slider'
         style={{
           width: '100%',
@@ -32,19 +32,19 @@ const Eyecatch: NextPage = () => {
       >
         <Slick {...settings}>
           {imgArray.map((img, index) => (
-            <li key={index.toString()}>
+            <div key={index.toString()}>
               <img
                 src={img}
                 alt='トップイメージ'
                 style={{ width: '100%', height: '85vh', objectFit: 'cover' }}
               />
-            </li>
+            </div>
           ))}
         </Slick>
         <div className={styles.catchCopy}>
           一級品のユニフォームを手頃に手軽に届けたい。
         </div>
-      </ul>
+      </div>
     </>
   );
 };
