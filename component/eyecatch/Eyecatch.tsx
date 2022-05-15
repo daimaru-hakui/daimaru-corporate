@@ -32,15 +32,13 @@ const Eyecatch: NextPage = () => {
       >
         <Slick {...settings}>
           {imgArray.map((img, index) => (
-            <div key={index.toString()}>
-              <li key={index}>
-                <img
-                  src={img}
-                  alt='トップイメージ'
-                  style={{ width: '100%', height: '85vh', objectFit: 'cover' }}
-                />
-              </li>
-            </div>
+            <li key={index.toString()}>
+              <img
+                src={img}
+                alt='トップイメージ'
+                style={{ width: '100%', height: '85vh', objectFit: 'cover' }}
+              />
+            </li>
           ))}
         </Slick>
         <div className={styles.catchCopy}>
