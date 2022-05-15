@@ -3,14 +3,40 @@ import styles from './Header.module.scss';
 import Image from 'next/image';
 import { NextPage } from 'next';
 import Link from 'next/link';
+import Drawer from '../drawer/Drawer';
 // import Logo from 'src/assets/svg/Logo.svg';
 
 const Header: NextPage = () => {
   const [openMenu, setOpenMenu] = useState(true);
-
   const menuFunction = () => {
     setOpenMenu(!openMenu);
   };
+  const items = [
+    {
+      name: '商品情報',
+      link: '/product',
+    },
+    {
+      name: '会社情報',
+      link: '/company',
+    },
+    {
+      name: '店舗情報',
+      link: '/shop',
+    },
+    {
+      name: 'CSR',
+      link: '/csr',
+    },
+    {
+      name: '採用情報',
+      link: '/recruit',
+    },
+    {
+      name: 'お問い合わせ',
+      link: '/contact',
+    },
+  ];
 
   return (
     <div className={styles.container}>
@@ -31,50 +57,16 @@ const Header: NextPage = () => {
       <div className={styles.topbarRight}>
         <div className={styles.menuWrapper}>
           <ul className={styles.menuList}>
-            <li className={styles.menuListItem}>
-              <a href='#'>商品情報</a>
-            </li>
-            <li className={styles.menuListItem}>
-              <a>会社情報</a>
-            </li>
-            <li className={styles.menuListItem}>
-              <a>店舗情報</a>
-            </li>
-            <li className={styles.menuListItem}>
-              <a>CSR</a>
-            </li>
-            <li className={styles.menuListItem}>
-              <a>採用情報</a>
-            </li>
-            <li className={styles.menuListItem}>
-              <a>お問い合わせ</a>
-            </li>
+            {items.map((item, index) => (
+              <li className={styles.menuListItem} key={index.toString()}>
+                <Link href={item.link}>
+                  <a>{item.name}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
-        <div className={openMenu ? '' : styles.isAction}>
-          <div className={styles.drawerWrapper}>
-            <ul className={styles.drawerList}>
-              <li className={styles.drawerListItem}>
-                <a href='#'>商品情報</a>
-              </li>
-              <li className={styles.drawerListItem}>
-                <a>会社情報</a>
-              </li>
-              <li className={styles.drawerListItem}>
-                <a>店舗情報</a>
-              </li>
-              <li className={styles.drawerListItem}>
-                <a>CSR</a>
-              </li>
-              <li className={styles.drawerListItem}>
-                <a>採用情報</a>
-              </li>
-              <li className={styles.drawerListItem}>
-                <a>お問い合わせ</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <Drawer openMenu={openMenu} />
       </div>
       <div className={styles.burgerBtn} onClick={() => menuFunction()}>
         <div className={styles.burgerBtnInner}>

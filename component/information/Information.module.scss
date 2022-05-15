@@ -1,5 +1,7 @@
 .infoWrapper {
   margin: 50px auto;
+  padding: 0 0 50px 0;
+  border-bottom: 1px #eee solid;
 }
 .infoHeading {
   display: none;
@@ -11,6 +13,7 @@
 
 .infoList {
   margin: 0;
+  padding: 0 15px;
 }
 
 .infoListItem {
@@ -18,7 +21,7 @@
   font-size: 0.8rem;
   line-height: 1.4;
   list-style: none;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   & .time {
     min-width: 210px;
     margin-bottom: 15px;
@@ -72,6 +75,7 @@
   }
   .infoListItem {
     display: flex;
+    margin-bottom: 20px;
     & .time {
       flex: 2;
     }

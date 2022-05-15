@@ -31,17 +31,17 @@ const Information: NextPage<Props> = ({ posts }) => {
         <div className={styles.infoBody}>
           <ul className={styles.infoList}>
             {posts.map((post) => (
-              <div key={post.id}>
-                <li className={styles.infoListItem}>
-                  <time dateTime={post.updatedAt} className={styles.time}>
-                    {post.date.substring(0, 10)}
-                    <i className={styles.cat}>{post.category}</i>
-                  </time>
+              <li className={styles.infoListItem} key={post.id}>
+                <time dateTime={post.updatedAt} className={styles.time}>
+                  {post.date.substring(0, 10)}
+                  <i className={styles.cat}>{post.category}</i>
+                </time>
+                <p className={styles.title}>
                   <Link href={`/news/${post.id}`}>
-                    <a className={styles.title}>{post.title}</a>
+                    <a>{post.title}</a>
                   </Link>
-                </li>
-              </div>
+                </p>
+              </li>
             ))}
           </ul>
         </div>
