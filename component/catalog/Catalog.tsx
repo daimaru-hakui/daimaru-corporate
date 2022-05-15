@@ -12,12 +12,15 @@ const Catalog = () => {
         <ul className={styles.catalogList}>
           <li className={styles.catalogItem}>
             <a href='https://my.ebook5.net/daimaru-hakui/my-uniform-club/'>
-              <img src='/images/myuni.jpg' />
+              <img
+                src='/images/myuni.jpg'
+                alt={'マイユニフォームクラブ　カタログ'}
+              />
             </a>
           </li>
           <li className={styles.catalogItem}>
             <a href='https://my.ebook5.net/daimaru-hakui/serenade/'>
-              <img src='/images/serenade.jpg' />
+              <img src='/images/serenade.jpg' alt={'セレナーデ　カタログ'} />
             </a>
           </li>
         </ul>
