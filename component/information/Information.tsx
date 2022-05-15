@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Link from 'next/link';
 import React from 'react';
 import styles from './Information.module.scss';
 
@@ -22,7 +23,9 @@ const Information: NextPage<Props> = ({ posts }) => {
         <div className={styles.infoHeading}>
           <h3>お知らせ</h3>
           <div className={styles.infoBtn}>
-            <a href='#'>一覧へ</a>
+            <Link href={'/news'}>
+              <a>一覧へ</a>
+            </Link>
           </div>
         </div>
         <div className={styles.infoBody}>
@@ -34,7 +37,9 @@ const Information: NextPage<Props> = ({ posts }) => {
                     {post.date.substring(0, 10)}
                     <i className={styles.cat}>{post.category}</i>
                   </time>
-                  <p className={styles.title}>{post.title}</p>
+                  <Link href={`/news/${post.id}`}>
+                    <a className={styles.title}>{post.title}</a>
+                  </Link>
                 </li>
               </div>
             ))}

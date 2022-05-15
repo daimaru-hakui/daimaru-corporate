@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Header.module.scss';
 import Image from 'next/image';
 import { NextPage } from 'next';
+import Link from 'next/link';
 // import Logo from 'src/assets/svg/Logo.svg';
 
 const Header: NextPage = () => {
@@ -15,12 +16,16 @@ const Header: NextPage = () => {
     <div className={styles.container}>
       <div className={styles.topbarLeft}>
         <div className={styles.logo}>
-          <Image
-            src='/logo.svg'
-            width={'250px'}
-            height={'50px'}
-            alt={'大丸白衣'}
-          />
+          <Link href={'/'}>
+            <a>
+              <Image
+                src='/logo.svg'
+                width={'250px'}
+                height={'50px'}
+                alt={'大丸白衣'}
+              />
+            </a>
+          </Link>
         </div>
       </div>
       <div className={styles.topbarRight}>
