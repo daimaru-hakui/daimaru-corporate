@@ -5,7 +5,7 @@ const id = ({ post }: any) => {
   return (
     <>
       <Header />
-      <div>
+      <div className=''>
         {post.date.substring(0, 10)}
         {post.title}
         {post.category}
