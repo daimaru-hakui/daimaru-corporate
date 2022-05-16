@@ -9,7 +9,7 @@
 }
 .companyH1 {
   margin-top: 55px;
-  margin-bottom: 65px;
+  margin-bottom: 20px;
 }
 .companyH2 {
   padding: 15px 0;
@@ -40,6 +40,9 @@
 @media screen and (min-width: 900px) {
   .companyInner {
     width: 900px;
+  }
+  .companyH1 {
+    margin-bottom: 65px;
   }
   .companyItem {
     display: flex;
