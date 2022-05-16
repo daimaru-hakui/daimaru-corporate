@@ -1,0 +1,55 @@
+.companySection {
+  width: 100%;
+  padding-bottom: 100px;
+}
+.companyInner {
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.companyH1 {
+  margin-top: 55px;
+  margin-bottom: 65px;
+}
+.companyH2 {
+  padding: 15px 0;
+  margin: 0;
+  border-bottom: 1px #000 solid;
+}
+.companyList {
+  margin: 0;
+  padding: 0;
+}
+.companyItem {
+  display: flex;
+  padding: 32px 0;
+  border-bottom: 1px #eee solid;
+}
+.p {
+  margin: 0;
+}
+.companyLeft {
+  flex: 4;
+  text-align: left;
+  font-weight: 900;
+}
+.companyRight {
+  flex: 8;
+  text-align: left;
+}
+@media screen and (min-width: 900px) {
+  .companyInner {
+    width: 900px;
+  }
+  .companyItem {
+    display: flex;
+    padding: 32px 0;
+    border-bottom: 1px #eee solid;
+  }
+  .companyLeft {
+    flex: 3;
+  }
+  .companyRight {
+    flex: 9;
+  }
+}
