@@ -39,7 +39,11 @@ const Company = () => {
                       <br />
                       大阪市中央区日本橋2丁目4番17号
                       <br />
-                      営業部｜Tel : 06-6632-0891（代表） FAX : 06-6641-9200
+                      営業部｜
+                      <br className={styles.companyBr} />
+                      Tel : 06-6632-0891（代表）{' '}
+                      <br className={styles.companyBr} />
+                      Fax : 06-6641-9200
                       <br />
                       ショップ｜Tel : 06-6641-4629
                     </p>
@@ -53,7 +57,9 @@ const Company = () => {
                       <br />
                       神戸市中央区三宮町3丁目9番17号
                       <br />
-                      Tel : 078-391-4629 FAX : 078-321-0747
+                      Tel : 078-391-4629　
+                      <br className={styles.companyBr} />
+                      Fax : 078-321-0747
                     </p>
                   </div>
                 </li>
@@ -110,8 +116,11 @@ const Company = () => {
                 <li className={styles.companyItem}>
                   <div className={styles.companyLeft}>取引銀行</div>
                   <div className={styles.companyRight}>
-                    三菱UFJ銀行 心斎橋支店　／　三井住友銀行
-                    難波支店　／　関西みらい銀行 難波支店
+                    三菱UFJ銀行 心斎橋支店　　
+                    <br className={styles.companyBr} />
+                    三井住友銀行 難波支店　　
+                    <br className={styles.companyBr} />
+                    関西みらい銀行 難波支店
                   </div>
                 </li>
                 <li className={styles.companyItem}>
