@@ -22,6 +22,7 @@
 }
 .companyItem {
   display: flex;
+  font-size: 0.9rem;
   padding: 32px 0;
   border-bottom: 1px #eee solid;
 }
@@ -42,12 +43,10 @@
     width: 900px;
   }
   .companyH1 {
-    margin-bottom: 65px;
+    margin-bottom: 55px;
   }
   .companyItem {
-    display: flex;
-    padding: 32px 0;
-    border-bottom: 1px #eee solid;
+    font-size: 1rem;
   }
   .companyLeft {
     flex: 3;
