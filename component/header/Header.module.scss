@@ -8,8 +8,8 @@
   background-color: white;
 }
 
-.topbarLeft {
-  flex: 5;
+.headerLeft {
+  flex: 7;
   display: flex;
   align-items: center;
 }
@@ -18,10 +18,19 @@
   margin-left: 20px;
 }
 
-.topbarRight {
+.headerRight {
   flex: 5;
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 900px) {
+  .topbarLeft {
+    flex: 4;
+  }
+
+  .topbarRight {
+    flex: 8;
+  }
 }
 
 //menu
@@ -47,12 +56,12 @@
       padding: 0 1rem;
     }
     &::after {
-      content: '|';
+      content: "|";
     }
   }
   & li:last-child {
     &::after {
-      content: '';
+      content: "";
     }
   }
 }
