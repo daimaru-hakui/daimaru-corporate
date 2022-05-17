@@ -7,15 +7,6 @@
   padding: 0 10px;
   margin: 0 auto;
 }
-.companyH1 {
-  margin-top: 55px;
-  margin-bottom: 20px;
-}
-.companyH2 {
-  padding: 15px 0;
-  margin: 0;
-  border-bottom: 1px #000 solid;
-}
 .companyList {
   margin: 0;
   padding: 0;
@@ -41,9 +32,6 @@
 @media screen and (min-width: 900px) {
   .companyInner {
     width: 900px;
-  }
-  .companyH1 {
-    margin-bottom: 55px;
   }
   .companyItem {
     font-size: 1rem;

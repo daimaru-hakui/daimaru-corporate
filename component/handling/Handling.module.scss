@@ -1,0 +1,25 @@
+.handlingArea {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: wrap;
+  width: 100%;
+  margin-bottom: 55px;
+}
+
+.handlingBox {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .handlingBox {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .handlingBox {
+    width: 33%;
+  }
+}

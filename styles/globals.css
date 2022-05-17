@@ -31,3 +31,9 @@ ul.slider .slick-dots {
 .slick-dots li button:before {
   color: rgb(35, 137, 233) !important;
 }
+
+@media screen and (min-width: 900px) {
+  .br {
+    display: none;
+  }
+}
