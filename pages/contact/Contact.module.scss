@@ -1,0 +1,48 @@
+.contact {
+  &Section {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+  &Inner {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  &Form {
+    max-width: 650px;
+    &Box {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+    }
+    & label {
+      min-width: 150px;
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+    & input,
+    textarea {
+      background-color: #eee;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 0.25rem;
+    }
+    & input {
+      height: 40px;
+    }
+    & textarea {
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contactInner {
+    width: 900px;
+  }
+  .contactFormBox {
+    flex-direction: row;
+    align-items: center;
+  }
+}
