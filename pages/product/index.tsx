@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import React from 'react';
-import Footer from '../../component/footer/Footer';
-import Handling from '../../component/handling/Handling';
-import Header from '../../component/header/Header';
-import PageTitle from '../../component/pagetitle/PageTitle';
+import Footer from '../../components/footer/Footer';
+import Handling from '../../components/handling/Handling';
+import Header from '../../components/header/Header';
+import PageTitle from '../../components/pagetitle/PageTitle';
 import styles from './Product.module.scss';
 
 const Product = () => {

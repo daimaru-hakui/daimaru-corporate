@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../component/header/Header';
+import Header from '../../components/header/Header';
 
 const id = ({ post }: any) => {
   return (

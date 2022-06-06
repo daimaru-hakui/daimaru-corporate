@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import Head from 'next/head';
 import React from 'react';
-import Footer from '../../component/footer/Footer';
-import Header from '../../component/header/Header';
-import PageTitle from '../../component/pagetitle/PageTitle';
+import Footer from '../../components/footer/Footer';
+import Header from '../../components/header/Header';
+import PageTitle from '../../components/pagetitle/PageTitle';
 import styles from './Company.module.scss';
 
 const Company = () => {

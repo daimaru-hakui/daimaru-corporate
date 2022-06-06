@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import Eyecatch from '../component/eyecatch/Eyecatch';
-import Information from '../component/information/Information';
-import Header from '../component/header/Header';
-import Footer from '../component/footer/Footer';
-import Catalog from '../component/catalog/Catalog';
+import Eyecatch from '../components/eyecatch/Eyecatch';
+import Information from '../components/information/Information';
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+import Catalog from '../components/catalog/Catalog';
 
 interface Props {
   posts: {
@@ -31,7 +31,7 @@ const Home: NextPage<Props> = ({ posts }) => {
       <main>
         <Eyecatch />
         <Catalog />
-        <Information posts={posts} />
+        <Information posts={posts} directory={'/news'} />
       </main>
       <Footer />
     </>
@@ -43,10 +43,10 @@ export default Home;
 export async function getStaticProps() {
   const option: {} = {
     headers: {
-      'X-MICROCMS-API-KEY': process.env.NEXT_KEY,
+      'X-MICROCMS-API-KEY': '0d40d76b88e947a48c98d0320506b1927c9f',
     },
   };
-  const res = await fetch(`${process.env.NEXT_API}news`, option);
+  const res = await fetch(`https://qyj277q4jw.microcms.io/api/v1/news`, option);
   const resJson = await res.json();
   const posts = resJson.contents;
   return {
