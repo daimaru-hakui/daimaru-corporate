@@ -1,6 +1,6 @@
-import { NextPage } from "next";
-import Link from "next/link";
-import React from "react";
+import { NextPage } from 'next';
+import Link from 'next/link';
+import React from 'react';
 
 interface Props {
   posts: {
@@ -25,7 +25,7 @@ const ArticleList: NextPage<Props> = ({ posts, directory }) => {
             key={post.id}
             className={`list-none py-3 flex flex-col lg:flex-row lg:w-full`}
           >
-            <div className={`lg:w-4/12 `}>
+            <div className={`mb-2 lg:w-4/12 `}>
               <span className={`mr-6 lg:mr-12`}>
                 {post.date.substring(0, 10)}
               </span>

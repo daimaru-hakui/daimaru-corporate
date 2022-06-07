@@ -1,7 +1,7 @@
-import { NextPage } from "next";
-import Link from "next/link";
-import React from "react";
-import styles from "./Information.module.scss";
+import { NextPage } from 'next';
+import Link from 'next/link';
+import React from 'react';
+import styles from './Information.module.scss';
 
 interface Props {
   posts: {
@@ -20,7 +20,7 @@ interface Props {
 const Information: NextPage<Props> = ({ posts, directory }) => {
   return (
     <>
-      <div className={`${styles.infoWrapper} px-4 py-4`}>
+      <div className={`${styles.infoWrapper} p-6`}>
         <div className={styles.infoHeading}>
           <h3>お知らせ</h3>
         </div>
