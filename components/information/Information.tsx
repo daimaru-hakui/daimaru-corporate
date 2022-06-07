@@ -1,7 +1,7 @@
-import { NextPage } from 'next';
-import Link from 'next/link';
-import React from 'react';
-import styles from './Information.module.scss';
+import { NextPage } from "next";
+import Link from "next/link";
+import React from "react";
+import styles from "./Information.module.scss";
 
 interface Props {
   posts: {
@@ -20,23 +20,18 @@ interface Props {
 const Information: NextPage<Props> = ({ posts, directory }) => {
   return (
     <>
-      <div className={styles.infoWrapper}>
+      <div className={`${styles.infoWrapper} px-2 py-4`}>
         <div className={styles.infoHeading}>
           <h3>お知らせ</h3>
-          <div className={styles.infoBtn}>
-            <Link href={directory}>
-              <a>一覧へ</a>
-            </Link>
-          </div>
         </div>
-        <div className={`${styles.infoBody} `}>
+        <div className={`${styles.infoBody}`}>
           <ul className={`${styles.infoList} m-0 p-0`}>
             {posts.map((post) => (
-              <li className={`${styles.infoListItem} md:ml-20`} key={post.id}>
-                <span className={`md:mr-8`}>
+              <li className={`${styles.infoListItem} lg:ml-20`} key={post.id}>
+                <span className={`block mb-2 lg:mr-8`}>
                   <time
                     dateTime={post.updatedAt}
-                    className={`${styles.time} md:mr-8`}
+                    className={`${styles.time} mr-8`}
                   >
                     {post.date.substring(0, 10)}
                   </time>
@@ -50,6 +45,13 @@ const Information: NextPage<Props> = ({ posts, directory }) => {
               </li>
             ))}
           </ul>
+        </div>
+        <div
+          className={`${styles.infoBtn} py-1 mx-auto w-24 text-center border lg:absolute`}
+        >
+          <Link href={directory}>
+            <a>一覧へ</a>
+          </Link>
         </div>
       </div>
     </>
