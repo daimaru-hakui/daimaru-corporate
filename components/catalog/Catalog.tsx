@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import styles from './Catalog.module.scss';
+import React from "react";
+import styles from "./Catalog.module.scss";
 
 const Catalog = () => {
   return (
@@ -12,16 +12,27 @@ const Catalog = () => {
       <div className={styles.catalogBody}>
         <ul className={styles.catalogList}>
           <li className={styles.catalogItem}>
-            <a href='https://my.ebook5.net/daimaru-hakui/my-uniform-club/'>
+            <a
+              href="https://my.ebook5.net/daimaru-hakui/my-uniform-club/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
-                src='/images/myuni.jpg'
-                alt={'マイユニフォームクラブ　カタログ'}
+                src="/images/myuni.jpg"
+                alt={"マイユニフォームクラブ　カタログ"}
               />
             </a>
           </li>
           <li className={styles.catalogItem}>
-            <a href='https://my.ebook5.net/daimaru-hakui/serenade/'>
-              <img src='/images/serenade.jpg' alt={'セレナーデ　カタログ'} />
+            <a
+              href="https://my.ebook5.net/daimaru-hakui/serenade-vol5/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/serenade-catalog-1.jpg"
+                alt={"セレナーデ　カタログ"}
+              />
             </a>
           </li>
         </ul>

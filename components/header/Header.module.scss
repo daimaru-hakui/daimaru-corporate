@@ -59,12 +59,12 @@
       padding: 0 1rem;
     }
     &::after {
-      content: '|';
+      content: "|";
     }
   }
   & li:last-child {
     &::after {
-      content: '';
+      content: "";
     }
   }
 }
@@ -82,7 +82,7 @@
   top: 0;
   & span {
     width: 50px;
-    height: 4px;
+    height: 2px;
     background: #555;
     background-color: black;
     position: absolute;

@@ -32,6 +32,8 @@ ul.slider .slick-dots {
   transform: translateY(-15%);
 }
 
+
+
 .slick-dots li button:before {
   color: rgb(35, 137, 233) !important;
 }
@@ -39,5 +41,9 @@ ul.slider .slick-dots {
 @media screen and (min-width: 900px) {
   .br {
     display: none;
+  }
+  .inner {
+    width:900px;
+    margin: 0 auto;
   }
 }
