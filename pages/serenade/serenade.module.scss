@@ -1,0 +1,10 @@
+.serenadeContainer {
+  max-width: 1256px;
+  & h1 {
+    letter-spacing: 0.6rem;
+  }
+  & p {
+    line-height: 2.8rem;
+    letter-spacing: 0.13rem;
+  }
+}
