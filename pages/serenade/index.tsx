@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import React from "react";
+import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Information from "../../components/information/Information";
 import styles from "./serenade.module.scss";
@@ -64,8 +65,33 @@ const Serenade: NextPage<Props> = ({ posts }) => {
             </div>
           </div>
         </div>
-        <Information posts={posts} directory={"/serenade/news"} />
+        <div className={`inner`}>
+          <div className={`w-full text-center mt-28 mb-24 p-3`}>
+            <h2 className={`text-3xl`}>DIGITAL CATALOG</h2>
+            <div className={`mx-auto border mt-12 lg:w-8/12`}>
+              <a
+                href="https://my.ebook5.net/daimaru-hakui/serenade-vol5/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./images/serenade-catalog-2.jpg" />
+              </a>
+            </div>
+            <button>
+              <a
+                href="https://my.ebook5.net/daimaru-hakui/serenade-vol5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block text-sm border px-12 py-3 mt-12 hover:bg-black hover:text-white ease-in duration-200`}
+              >
+                デジタルカタログを見る
+              </a>
+            </button>
+          </div>
+        </div>
+        <Information posts={posts} directory={"serenade/news"} />
       </main>
+      <Footer />
     </>
   );
 };

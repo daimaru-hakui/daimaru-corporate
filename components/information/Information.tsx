@@ -20,7 +20,7 @@ interface Props {
 const Information: NextPage<Props> = ({ posts, directory }) => {
   return (
     <>
-      <div className={`${styles.infoWrapper} px-2 py-4`}>
+      <div className={`${styles.infoWrapper} px-4 py-4`}>
         <div className={styles.infoHeading}>
           <h3>お知らせ</h3>
         </div>
@@ -38,7 +38,7 @@ const Information: NextPage<Props> = ({ posts, directory }) => {
                   <i className={styles.cat}>{post.category}</i>
                 </span>
                 <p className={`${styles.title}`}>
-                  <Link href={`/news/${post.id}`}>
+                  <Link href={`/${directory}/${post.id}`}>
                     <a>{post.title}</a>
                   </Link>
                 </p>
