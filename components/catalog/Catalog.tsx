@@ -18,7 +18,7 @@ const Catalog = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/images/myuni.jpg"
+                src="/images/myuni-catalog-1.jpg"
                 alt={"マイユニフォームクラブ　カタログ"}
               />
             </a>
