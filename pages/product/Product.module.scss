@@ -1,14 +1,3 @@
-.productSection {
-  width: 100%;
-  padding-bottom: 100px;
-}
-
-.productInner {
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
 .productBox {
   margin-top: 35px;
   flex-wrap: wrap;
@@ -53,10 +42,6 @@
 }
 
 @media screen and (min-width: 900px) {
-  .productInner {
-    width: 900px;
-  }
-
   .productBox {
     margin-top: 90px;
     display: flex;

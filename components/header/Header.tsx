@@ -5,6 +5,7 @@ import Image from "next/image";
 import { NextPage } from "next";
 import Link from "next/link";
 import Drawer from "../drawer/Drawer";
+import { Menus } from "../../deta";
 // import Logo from 'src/assets/svg/Logo.svg';
 
 const Header: NextPage = () => {
@@ -12,36 +13,6 @@ const Header: NextPage = () => {
   const menuFunction = () => {
     setOpenMenu(!openMenu);
   };
-  const items = [
-    {
-      name: "Serenade",
-      link: "/serenade",
-    },
-    {
-      name: "商品情報",
-      link: "/product",
-    },
-    {
-      name: "会社情報",
-      link: "/company",
-    },
-    // {
-    //   name: '店舗情報',
-    //   link: '/shop',
-    // },
-    // {
-    //   name: 'CSR',
-    //   link: '/csr',
-    // },
-    {
-      name: "採用情報",
-      link: "/recruit",
-    },
-    {
-      name: "お問い合わせ",
-      link: "/contact",
-    },
-  ];
 
   return (
     <header
@@ -64,10 +35,10 @@ const Header: NextPage = () => {
       <div className={`w-3/12 lg:w-9/12 flex items-center lg:mr-6`}>
         <div className={`w-full hidden lg:block`}>
           <ul className={`${styles.menuList} w-full flex justify-end`}>
-            {items.map((item, index) => (
+            {Menus.map((menu, index) => (
               <li className={`list-none text-sm`} key={index.toString()}>
-                <Link href={item.link}>
-                  <a className={`mx-6`}>{item.name}</a>
+                <Link href={menu.link}>
+                  <a className={`mx-6`}>{menu.name}</a>
                 </Link>
               </li>
             ))}

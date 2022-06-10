@@ -1,24 +1,7 @@
-.companySection {
-  width: 100%;
-  padding-bottom: 100px;
-}
-.companyInner {
-  width: 100%;
-  padding: 0 10px;
-  margin: 0 auto;
-}
-.companyList {
-  margin: 0;
-  padding: 0;
-}
 .companyItem {
   display: flex;
-  font-size: 0.9rem;
   padding: 32px 0;
   border-bottom: 1px #eee solid;
-}
-.p {
-  margin: 0;
 }
 .companyLeft {
   flex: 4;
@@ -30,12 +13,6 @@
   text-align: left;
 }
 @media screen and (min-width: 900px) {
-  .companyInner {
-    width: 900px;
-  }
-  .companyItem {
-    font-size: 1rem;
-  }
   .companyLeft {
     flex: 3;
   }

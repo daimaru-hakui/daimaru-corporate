@@ -1,13 +1,4 @@
 .contact {
-  &Section {
-    width: 100%;
-    padding-bottom: 100px;
-  }
-  &Inner {
-    width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
   &Form {
     max-width: 650px;
     &Box {
@@ -38,9 +29,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .contactInner {
-    width: 900px;
-  }
   .contactFormBox {
     flex-direction: row;
     align-items: center;
