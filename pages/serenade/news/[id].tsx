@@ -34,9 +34,6 @@ export async function getStaticPaths() {
   const paths = resJson.contents.map((content: any) => ({
     params: {
       id: content.id,
-      title: content.title,
-      category: content.category,
-      date: content.date,
     },
   }));
   return {
