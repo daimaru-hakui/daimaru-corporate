@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import React from 'react';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
@@ -32,7 +33,7 @@ const Serenade: NextPage<Props> = ({ posts }) => {
           className={`${styles.serenadeContainer} mx-auto flex flex-col lg:flex-row`}
         >
           <div className={`w-full lg:w-7/12`}>
-            <img src='./images/serenade-top-image.jpg' />
+            <img src='./images/serenade-top-image.jpg' alt='serenade' />
           </div>
           <div
             className={`w-full lg:w-5/12 p-6 mt-12 lg:mt-0 flex flex-col items-center justify-center`}
