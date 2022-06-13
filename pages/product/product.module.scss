@@ -1,0 +1,41 @@
+.productLeft {
+  & img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+.productTitleH2 {
+  padding: 15px 0;
+  margin: 0;
+  border-bottom: 1px #000 solid;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 900px) {
+  .productLeft {
+    flex: 4;
+  }
+
+  .productCenter {
+    flex: 1;
+  }
+
+  .productRight {
+    flex: 8;
+  }
+
+  .productBr {
+    display: none;
+  }
+
+  .productTitleH2 {
+    padding: 15px 0;
+    margin: 0;
+    border-bottom: 1px #000 solid;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
