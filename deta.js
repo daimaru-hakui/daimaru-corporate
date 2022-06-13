@@ -4,12 +4,8 @@ export const Menus = [
     link: "/serenade",
   },
   {
-    name: "ブランド",
-    link: "/brand",
-  },
-  {
     name: "商品情報",
-    link: "/products",
+    link: "/product",
   },
   {
     name: "会社情報",

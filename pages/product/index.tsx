@@ -5,9 +5,9 @@ import Footer from "../../components/footer/Footer";
 import Handling from "../../components/handling/Handling";
 import Header from "../../components/header/Header";
 import PageTitle from "../../components/pagetitle/PageTitle";
-import styles from "./Brand.module.scss";
+import styles from "./Product.module.scss";
 
-const Brand = () => {
+const Product = () => {
   return (
     <>
       <Head>
@@ -22,8 +22,8 @@ const Brand = () => {
               titleH1="商品情報"
               titleH2="Original Brand　/　オリジナルブランド"
             />
-            <div className={styles.productBox}>
-              <div className={styles.productLeft}>
+            <div className={`flex flex-wrap mt-24`}>
+              <div className={`${styles.productLeft} mb-0 mx-auto md:mb-12`}>
                 <img
                   src="./images/myuni-catalog-1.jpg"
                   alt={"マイユニフォームクラブ　カタログ"}
@@ -31,13 +31,13 @@ const Brand = () => {
               </div>
               <div className={styles.productCenter}></div>
               <div className={styles.productRight}>
-                <h3 className={styles.productTitle}>My Uniform Club</h3>
-                <h4 className={styles.productSubTitle}>
+                <h3 className={`text-3xl font-bold`}>My Uniform Club</h3>
+                <h4 className={`p-0 mt-3 mb-4 text-gray-400`}>
                   一期一会のひと時を紡ぎ出す
                   <br className="br" />
                   おもてなしの舞台へ。
                 </h4>
-                <p>
+                <p className={`text-md`}>
                   フードサービス、フードファクトリー、といった「食」にかかわるユニフォームや資材のブランドです。
                   <br />
                   食の安全を大切に、早くから制菌・抗菌や制電・防汚などの機能性素材を積極的に採用した製品づくりを行っています。多くのロングセラー商品を展開する安心のブランドです。
@@ -45,21 +45,24 @@ const Brand = () => {
               </div>
             </div>
             <div
-              className={styles.productBox}
+              className={`flex flex-wrap mt-24 mb-28`}
               style={{ flexDirection: "row-reverse" }}
             >
-              <div className={styles.productLeft}>
+              <div className={`${styles.productLeft} mb-0 mx-auto md:mb-12`}>
                 <img
                   src="./images/serenade-catalog-1.jpg"
                   alt="セレナーデ　カタログ"
+                  className={`object-cover mx-auto w-full`}
                 />
               </div>
               <div className={styles.productCenter}></div>
               <div className={styles.productRight}>
-                <h3 className={styles.productTitle}>Serenade</h3>
-                <h4 className={styles.productSubTitle}>強く美しい人へ。</h4>
+                <h3 className={`text-3xl font-bold m-0`}>Serenade</h3>
+                <h4 className={`p-0 mt-3 mb-4 text-gray-400`}>
+                  強く美しい人へ。
+                </h4>
 
-                <p>
+                <p className={`text-md`}>
                   メディカルウェア、ラボコートといった「医療」や「研究」にかかわるユニフォームや資材のブランドです。
                   <br />
                   機能性素材はもちろんのこと、動きやすく着心地といった日々のお仕事に寄り添う製品づくりも行っています。
@@ -67,9 +70,11 @@ const Brand = () => {
               </div>
             </div>
             {/* 取り扱いユニフォーム */}
-            <h2 className={styles.productTitleH2}>取り扱いユニフォーム</h2>
+            <h2 className={`${styles.productTitleH2} text-xl`}>
+              取り扱いユニフォーム
+            </h2>
             <Handling />
-            <h2 className={styles.productTitleH2}>
+            <h2 className={`${styles.productTitleH2} text-xl`}>
               オリジナルユニフォーム／オーダーメイド
             </h2>
           </div>
@@ -80,4 +85,4 @@ const Brand = () => {
   );
 };
 
-export default Brand;
+export default Product;
