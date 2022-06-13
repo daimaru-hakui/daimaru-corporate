@@ -3,10 +3,8 @@ import { NextPage } from "next";
 import Head from "next/head";
 import React from "react";
 import Footer from "../../components/footer/Footer";
-import Handling from "../../components/handling/Handling";
 import Header from "../../components/header/Header";
 import PageTitle from "../../components/pagetitle/PageTitle";
-import styles from "./Products.module.scss";
 
 interface Props {
   products: {
