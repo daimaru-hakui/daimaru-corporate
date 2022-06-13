@@ -19,6 +19,7 @@ export const Menus = [
   //   name: 'CSR',
   //   link: '/csr',
   // },
+
   {
     name: "採用情報",
     link: "/recruit",
