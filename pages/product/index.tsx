@@ -6,7 +6,7 @@ import Footer from '../../components/footer/Footer';
 import Handling from '../../components/handling/Handling';
 import Header from '../../components/header/Header';
 import PageTitle from '../../components/pagetitle/PageTitle';
-import styles from './Product.module.scss';
+import styles from './product.module.scss';
 
 const Product = () => {
   return (
