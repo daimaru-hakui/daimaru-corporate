@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -19,11 +20,15 @@ interface Props {
     date: string;
   }[];
   images: {
-    catalogSerenadeImg2: {
-      url: string;
-    };
     serenadeTopImg: {
       url: string;
+      width: string;
+      height: string;
+    };
+    catalogSerenadeImg2: {
+      url: string;
+      width: string;
+      height: string;
     };
   };
 }
@@ -44,6 +49,8 @@ const Serenade: NextPage<Props> = ({ posts, images }) => {
             <img
               src={`${images.serenadeTopImg.url}?fm=webp`}
               alt='serenade イメージ画像'
+              width={images.serenadeTopImg.width}
+              height={images.serenadeTopImg.height}
             />
           </div>
           <div
@@ -89,8 +96,8 @@ const Serenade: NextPage<Props> = ({ posts, images }) => {
                 <img
                   src={`${images.catalogSerenadeImg2.url}?fm=webp`}
                   alt='serenade デジタルカタログ'
-                  width='800px'
-                  height='566px'
+                  width={images.catalogSerenadeImg2.width}
+                  height={images.catalogSerenadeImg2.height}
                 />
               </a>
             </div>
