@@ -45,7 +45,10 @@ export async function getStaticProps() {
       'X-MICROCMS-API-KEY': '0d40d76b88e947a48c98d0320506b1927c9f',
     },
   };
-  const res = await fetch(`https://qyj277q4jw.microcms.io/api/v1/news`, option);
+  const res = await fetch(
+    `https://daimarucorporate.microcms.io/api/v1/news`,
+    option
+  );
   const resJson = await res.json();
   const posts = resJson.contents;
   return {

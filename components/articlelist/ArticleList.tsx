@@ -34,7 +34,7 @@ const ArticleList: NextPage<Props> = ({ posts, directory }) => {
               </span>
             </div>
             <div className={`lg:w-8/12 `}>
-              <Link href={`/${directory}/${post.id}`}>{post.title}</Link>
+              <Link href={`${directory}/${post.id}`}>{post.title}</Link>
             </div>
           </li>
         ))}

@@ -38,7 +38,7 @@ const Information: NextPage<Props> = ({ posts, directory }) => {
                   <i className={styles.cat}>{post.category}</i>
                 </span>
                 <p className={`${styles.title}`}>
-                  <Link href={`/${directory}/${post.id}`}>
+                  <Link href={`${directory}/${post.id}`}>
                     <a>{post.title}</a>
                   </Link>
                 </p>

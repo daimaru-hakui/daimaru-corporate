@@ -26,7 +26,10 @@ export async function getStaticPaths() {
       'X-MICROCMS-API-KEY': '0d40d76b88e947a48c98d0320506b1927c9f',
     },
   };
-  const res = await fetch(`https://qyj277q4jw.microcms.io/api/v1/news`, option);
+  const res = await fetch(
+    `https://daimarucorporate.microcms.io/api/v1/news`,
+    option
+  );
   const resJson = await res.json();
   const paths = resJson.contents.map((content: any) => ({
     params: {
@@ -49,7 +52,7 @@ export async function getStaticProps({ params }: any) {
     },
   };
   const res = await fetch(
-    `https://qyj277q4jw.microcms.io/api/v1/news/${params.id}`,
+    `https://daimarucorporate.microcms.io/api/v1/news/${params.id}`,
     option
   );
   const post = await res.json();

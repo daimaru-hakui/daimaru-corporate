@@ -32,7 +32,7 @@ const SerenadeNews: NextPage<Props> = ({ posts }) => {
         <section className={`w-full`}>
           <div className={`inner p-6`}>
             <PageTitle titleH1='お知らせ一覧' titleH2='Serenade News' />
-            <ArticleList posts={posts} directory={`serenade/news`} />
+            <ArticleList posts={posts} directory={`/serenade/news`} />
           </div>
         </section>
       </main>

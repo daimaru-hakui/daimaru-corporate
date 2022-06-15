@@ -1,8 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import styles from "./Catalog.module.scss";
+import { NextPage } from 'next';
+import React from 'react';
+import styles from './Catalog.module.scss';
 
-const Catalog = () => {
+interface Props {
+  images: {
+    catalogSerenadeImg1: {
+      url: string;
+    };
+    catalogMyUniImg1: {
+      url: string;
+    };
+  };
+}
+
+const Catalog: NextPage<Props> = ({ images }) => {
   return (
     <div className={styles.catalogContainer}>
       <div className={styles.catalogInner}>
@@ -13,25 +25,29 @@ const Catalog = () => {
         <ul className={styles.catalogList}>
           <li className={styles.catalogItem}>
             <a
-              href="https://my.ebook5.net/daimaru-hakui/my-uniform-club/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://my.ebook5.net/daimaru-hakui/my-uniform-club/'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <img
-                src="/images/myuni-catalog-1.jpg"
-                alt={"マイユニフォームクラブ　カタログ"}
+                src={`${images.catalogMyUniImg1.url}?fm=webp`}
+                alt={'マイユニフォームクラブ　カタログ'}
+                width='300px'
+                height='424px'
               />
             </a>
           </li>
           <li className={styles.catalogItem}>
             <a
-              href="https://my.ebook5.net/daimaru-hakui/serenade-vol5/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://my.ebook5.net/daimaru-hakui/serenade-vol5/'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <img
-                src="/images/serenade-catalog-1.jpg"
-                alt={"セレナーデ　カタログ"}
+                src={`${images.catalogSerenadeImg1.url}?fm=webp`}
+                alt={'セレナーデ　カタログ'}
+                width='300px'
+                height='424px'
               />
             </a>
           </li>

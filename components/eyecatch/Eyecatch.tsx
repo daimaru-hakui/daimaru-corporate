@@ -5,7 +5,15 @@ import 'slick-carousel/slick/slick-theme.css';
 import styles from './Eyecatch.module.scss';
 import { NextPage } from 'next';
 
-const Eyecatch: NextPage = () => {
+interface Props {
+  images: {
+    daimaruTopImg1: { url: string };
+    daimaruTopImg2: { url: string };
+    daimaruTopImg3: { url: string };
+  };
+}
+
+const Eyecatch: NextPage<Props> = ({ images }) => {
   const settings = {
     dots: true,
     fade: true,
@@ -18,7 +26,11 @@ const Eyecatch: NextPage = () => {
     autoplaySpeed: 5000,
     pauseOnHover: false,
   };
-  const imgArray = ['/images/1.jpg', '/images/2.jpg', '/images/3.jpg'];
+  const imgArray = [
+    `${images.daimaruTopImg1.url}`,
+    `${images.daimaruTopImg2.url}`,
+    `${images.daimaruTopImg3.url}`,
+  ];
   return (
     <>
       <div
@@ -34,7 +46,7 @@ const Eyecatch: NextPage = () => {
           {imgArray.map((img, index) => (
             <div key={index.toString()}>
               <img
-                src={img}
+                src={`${img}?fm=webp`}
                 alt='トップイメージ'
                 style={{ width: '100%', height: '85vh', objectFit: 'cover' }}
               />
