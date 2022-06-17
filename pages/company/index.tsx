@@ -207,7 +207,7 @@ const Company = () => {
                 <div className={styles.companyLeft}>昭和31年</div>
                 <div className={styles.companyRight}>
                   <p>
-                    称号を「株式会社　大丸白衣」に変更
+                    商号を「株式会社　大丸白衣」に変更
                     <br />
                     資本金　1,000万円
                   </p>
