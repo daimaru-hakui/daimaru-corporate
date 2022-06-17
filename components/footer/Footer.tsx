@@ -1,10 +1,12 @@
-import React from 'react';
-import styles from './Footer.module.scss';
+import React from "react";
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
     <>
-      <footer className={styles.footer}>&copy; DAIMARU HAKUI CO., LTD.</footer>
+      <footer className={styles.footer}>
+        &copy; 大丸白衣 All rights reserved.
+      </footer>
     </>
   );
 };

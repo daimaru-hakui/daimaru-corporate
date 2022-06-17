@@ -1,82 +1,84 @@
-import React from 'react';
-import styles from './Handling.module.scss';
+import React from "react";
+import styles from "./Handling.module.scss";
 
 const Handling = () => {
   const items = [
     {
-      title: 'ホテル・飲食・サービス',
+      title: "ホテル・飲食・サービス",
       lists: [
-        'シェフコート',
-        '調理白衣',
-        'スラックス',
-        'ホール/調理用シューズなど',
+        "シェフコート",
+        "調理白衣",
+        "スラックス",
+        "ホール/調理用シューズなど",
       ],
     },
     {
-      title: 'オフィスユニフォーム',
+      title: "オフィスユニフォーム",
       lists: [
-        'ジャケット',
-        'スモッグ',
-        'ベスト',
-        'オーバーブラウス',
-        'スカート',
-        'パンツ',
-        'ブラウス',
+        "ジャケット",
+        "スモッグ",
+        "ベスト",
+        "オーバーブラウス",
+        "スカート",
+        "パンツ",
+        "ブラウス",
       ],
     },
     {
-      title: '衛生ユニフォーム',
-      lists: ['HACCP対応ユニフォーム', '衛生白衣', '衛生頭巾・帽子など'],
+      title: "衛生ユニフォーム",
+      lists: ["HACCP対応ユニフォーム", "衛生白衣", "衛生頭巾・帽子など"],
     },
 
     {
-      title: 'メディカルユニフォーム',
+      title: "メディカルユニフォーム",
       lists: [
-        '医療用白衣',
-        'スクラブ',
-        'スラックス',
-        '予防衣',
-        'ラボコート',
-        '介護・ケア',
-        '検診衣',
-        '入院着',
-        'オペ着',
-        '患者衣',
+        "医療用白衣",
+        "スクラブ",
+        "スラックス",
+        "予防衣",
+        "ラボコート",
+        "介護・ケア",
+        "検診衣",
+        "入院着",
+        "オペ着",
+        "患者衣",
       ],
     },
 
     {
-      title: 'イベント向け　プリント製品',
+      title: "イベント向け　プリント製品",
       lists: [
-        'Tシャツ',
-        'ポロシャツ',
-        'スウェット',
-        'ブルゾン',
-        'キャップ',
-        'エコバッグ',
+        "Tシャツ",
+        "ポロシャツ",
+        "スウェット",
+        "ブルゾン",
+        "キャップ",
+        "エコバッグ",
       ],
     },
     {
-      title: 'お祭り・法被など',
-      lists: ['法被', 'その他'],
+      title: "お祭り・法被など",
+      lists: ["法被", "その他"],
     },
     {
-      title: 'ワーキングユニフォーム',
+      title: "ワーキングユニフォーム",
       lists: [],
     },
     {
-      title: 'エステユニフォーム',
+      title: "エステユニフォーム",
       lists: [],
     },
   ];
   return (
     <div className={styles.handlingArea}>
       {items.map((item, index) => (
-        <div className={styles.handlingBox} key={index}>
-          <h3 className={styles.handlingTitle}>{item.title}</h3>
-          <ul>
+        <div className={`${styles.handlingBox} mb-6`} key={index}>
+          <h3 className={`${styles.handlingTitle} text-lg`}>{item.title}</h3>
+          <ul className="my-2">
             {item.lists.map((list, index) => (
-              <li key={index}>{list}</li>
+              <li key={index} className="text-sm">
+                {list}
+              </li>
             ))}
           </ul>
         </div>

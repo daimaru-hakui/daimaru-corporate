@@ -1,7 +1,7 @@
-import { NextPage } from 'next';
-import Link from 'next/link';
-import React from 'react';
-import styles from './Information.module.scss';
+import { NextPage } from "next";
+import Link from "next/link";
+import React from "react";
+import styles from "./Information.module.scss";
 
 interface Props {
   posts: {
@@ -46,13 +46,13 @@ const Information: NextPage<Props> = ({ posts, directory }) => {
             ))}
           </ul>
         </div>
-        <div
-          className={`${styles.infoBtn} py-1 mx-auto w-24 text-center border lg:absolute`}
-        >
-          <Link href={directory}>
+        <Link href={directory}>
+          <button
+            className={`${styles.infoBtn} py-1 mx-auto w-24 text-center border lg:absolute`}
+          >
             <a>一覧へ</a>
-          </Link>
-        </div>
+          </button>
+        </Link>
       </div>
     </>
   );
