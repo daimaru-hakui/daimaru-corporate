@@ -19,8 +19,8 @@ const Company = () => {
       <Header />
       <main>
         <section className={`m-full`}>
-          <div className={`inner p-6 pb-0`}>
-            <PageTitle titleH1="代表挨拶" titleH2="Message" />
+          <div className={`inner p-6 pb-0 mb-24`}>
+            <PageTitle titleH1="会社情報" titleH2="message" />
             <article className={`my-12 text-sm`}>
               <p className={`mb-6`}>
                 昭和6年、私たち大丸白衣は、その名の通り白衣専門店として大阪の地で創業しました。
@@ -40,7 +40,7 @@ const Company = () => {
               <p className={`mb-6`}>
                 私たち大丸白衣は、今後も上質なユニフォームづくりを通して人と社会に貢献できるよう、不断の努力を続けてまいります。
               </p>
-              <div className={"text-right"}>
+              <div className={"text-right mt-12"}>
                 代表取締役社長
                 <br />
                 中尾 仁美
@@ -48,9 +48,9 @@ const Company = () => {
             </article>
           </div>
         </section>
-        <section className={`m-full mb-32`}>
+        <section className={`m-full mb-12`}>
           <div className={`inner p-6`}>
-            <PageTitle titleH1="会社概要" titleH2="Company Profile" />
+            <PageTitle titleH1={null} titleH2="会社概要" />
             <ul className={`text-sm`}>
               <li className={`${styles.companyItem}`}>
                 <div className={styles.companyLeft}>会社名</div>
@@ -149,6 +149,137 @@ const Company = () => {
               <li className={styles.companyItem}>
                 <div className={styles.companyLeft}>決算期</div>
                 <div className={styles.companyRight}>毎年2月末日</div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section className={`m-full mb-32`}>
+          <div className={`inner p-6`}>
+            <PageTitle titleH1={null} titleH2="会社沿革" />
+            <div className="flex justify-center w-12/12 mx-auto text-center my-12">
+              <div className="mr-4">
+                <img
+                  src="/images/history-1.jpg"
+                  width="400px"
+                  height="300px"
+                  className="rounded"
+                />
+              </div>
+              <div className="">
+                <img
+                  src="/images/history-2.jpg"
+                  width="400px"
+                  height="300px"
+                  className="rounded"
+                />
+              </div>
+            </div>
+            <ul className={`text-sm`}>
+              <li
+                className={`${styles.companyItem} border-t border-t-gray-100`}
+              >
+                <div className={styles.companyLeft}>昭和6年</div>
+                <div className={styles.companyRight}>
+                  白衣専門店大丸白衣独立創業
+                  <br />
+                  創業者:中尾　元一
+                </div>
+              </li>
+              <li className={`${styles.companyItem}`}>
+                <div className={styles.companyLeft}>昭和18年～23年</div>
+                <div className={styles.companyRight}>
+                  <p className={styles.p}>第二次世界大戦により一時中断</p>
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>昭和23年</div>
+                <div className={styles.companyRight}>
+                  <p>「大阪市南区日本橋筋二丁目11番地」に社屋新築、営業開始</p>
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>昭和28年</div>
+                <div className={styles.companyRight}>
+                  <p>業務拡大により新社屋建築</p>
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>昭和31年</div>
+                <div className={styles.companyRight}>
+                  <p>
+                    称号を「株式会社　大丸白衣」に変更
+                    <br />
+                    資本金　1,000万円
+                  </p>
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>昭和36年</div>
+                <div className={styles.companyRight}>神戸支店設立</div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>昭和40年</div>
+                <div className={styles.companyRight}>配送センター設立</div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>昭和43年</div>
+                <div className={styles.companyRight}>資本金3,000万円に増資</div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>昭和45年</div>
+                <div className={styles.companyRight}>
+                  台湾台南県将軍郷忠興に5,000坪の合併工場を設立
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>昭和60年</div>
+                <div className={styles.companyRight}>
+                  徳島工場新築　生産能力の拡大を図る
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>平成元年</div>
+                <div className={styles.companyRight}>中国に協力工場設立</div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>平成3年</div>
+                <div className={styles.companyRight}>
+                  インドネシアに協力工場提携
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>平成6年</div>
+                <div className={styles.companyRight}>
+                  ベトナムに協力工場提携
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>平成8年</div>
+                <div className={styles.companyRight}>
+                  抗菌効果を持つ繊維を使用したユニフォームの本格生産開始
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>平成11年</div>
+                <div className={styles.companyRight}>
+                  ペットボトル再生繊維を使用したユニフォームの本格生産開始
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>平成13年</div>
+                <div className={styles.companyRight}>
+                  ユニフォームのレンタル・リース・クリーニングの有限会社ウィルフィット設立
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>平成26年</div>
+                <div className={styles.companyRight}>
+                  ISO9001 本社・徳島工場・神戸店・配送センターにて取得
+                </div>
+              </li>
+              <li className={styles.companyItem}>
+                <div className={styles.companyLeft}>令和1年9月</div>
+                <div className={styles.companyRight}>大丸白衣第二ビル完成</div>
               </li>
             </ul>
           </div>

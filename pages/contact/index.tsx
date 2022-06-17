@@ -14,15 +14,17 @@ const Contact = () => {
   const [lastname, setLastname] = useState(""); // 「お名前 名」
   const [firstkana, setFirstkana] = useState(""); // 「フリガナ 姓」
   const [lastkana, setLastkana] = useState(""); // 「フリガナ 名」
-  const [tel1, setTel1] = useState(""); // 「TEL」
-  const [tel2, setTel2] = useState(""); // 「TEL」
-  const [tel3, setTel3] = useState(""); // 「TEL」
-  const [fax1, setFax1] = useState(""); // 「FAX」
-  const [fax2, setFax2] = useState(""); // 「FAX」
-  const [fax3, setFax3] = useState(""); // 「FAX」
+  const [tel, setTel] = useState(""); // 「TEL」
+  const [fax, setFax] = useState(""); // 「FAX」
   const [email, setEmail] = useState(""); // 「メールアドレス」
-  // const [title, setTitle] = useState(''); // 「件名」
+  const [title, setTitle] = useState(""); // 「件名」
   const [message, setMessage] = useState(""); // 「お問い合わせ内容」
+  // const [tel1, setTel1] = useState(""); // 「TEL」
+  // const [tel2, setTel2] = useState(""); // 「TEL」
+  // const [tel3, setTel3] = useState(""); // 「TEL」
+  // const [fax1, setFax1] = useState(""); // 「FAX」
+  // const [fax2, setFax2] = useState(""); // 「FAX」
+  // const [fax3, setFax3] = useState(""); // 「FAX」
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -40,12 +42,8 @@ const Contact = () => {
         setLastname("");
         setFirstkana("");
         setLastkana("");
-        setTel1("");
-        setTel2("");
-        setTel3("");
-        setFax1("");
-        setFax2("");
-        setFax3("");
+        setTel("");
+        setFax("");
         setEmail("");
         setMessage("");
       },
@@ -186,67 +184,28 @@ const Contact = () => {
               </div>
 
               <div className={`${styles.contactFormBox}`}>
-                <label htmlFor="tel1">電話番号</label>
-                <div className={`flex items-center`}>
-                  <input
-                    type="text"
-                    id="tel1"
-                    className={`w-full md:w-3/12`}
-                    value={tel1}
-                    name="tel1"
-                    onChange={(e) => setTel1(e.target.value)}
-                  />
-                  <span className={`mx-1 mb-1`}>-</span>
-                  <input
-                    type="text"
-                    id="tel2"
-                    className={`w-full md:w-3/12`}
-                    value={tel2}
-                    name="tel2"
-                    onChange={(e) => setTel2(e.target.value)}
-                  />
-                  <span className={`mx-1 mb-1`}>-</span>
-                  <input
-                    type="text"
-                    id="tel3"
-                    className={`w-full md:w-3/12 `}
-                    value={tel3}
-                    name="tel3"
-                    onChange={(e) => setTel3(e.target.value)}
-                  />
-                </div>
+                <label htmlFor="tel">電話番号</label>
+                <input
+                  type="text"
+                  id="tel"
+                  className={`w-full md:w-10/12`}
+                  value={tel}
+                  name="tel"
+                  onChange={(e) => setTel(e.target.value)}
+                />
               </div>
 
               <div className={`${styles.contactFormBox}`}>
-                <label htmlFor="fax1">FAX番号</label>
-                <div className={`flex items-center`}>
-                  <input
-                    type="text"
-                    id="fax1"
-                    className={`w-full md:w-3/12`}
-                    value={fax1}
-                    name="fax1"
-                    onChange={(e) => setFax1(e.target.value)}
-                  />
-                  <span className={`mx-1 mb-1`}>-</span>
-                  <input
-                    type="text"
-                    id="fax2"
-                    className={`w-full md:w-3/12`}
-                    value={fax2}
-                    name="fax2"
-                    onChange={(e) => setFax2(e.target.value)}
-                  />
-                  <span className={`mx-1 mb-1`}>-</span>
-                  <input
-                    type="text"
-                    id="fax3"
-                    className={`w-full md:w-3/12`}
-                    value={fax3}
-                    name="fax3"
-                    onChange={(e) => setFax3(e.target.value)}
-                  />
-                </div>
+                <label htmlFor="fax">FAX番号</label>
+
+                <input
+                  type="text"
+                  id="fax"
+                  className={`w-full`}
+                  value={fax}
+                  name="fax"
+                  onChange={(e) => setFax(e.target.value)}
+                />
               </div>
 
               <div className={`${styles.contactFormBox}`}>
