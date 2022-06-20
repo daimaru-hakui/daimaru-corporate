@@ -46,13 +46,13 @@ const Information: NextPage<Props> = ({ posts, directory }) => {
             ))}
           </ul>
         </div>
-        <Link href={directory}>
-          <button
-            className={`${styles.infoBtn} py-1 mx-auto w-24 text-center border lg:absolute`}
-          >
-            <a>一覧へ</a>
-          </button>
-        </Link>
+        <div className={`${styles.infoBtn} border lg:absolute`}>
+          <Link href={directory}>
+            <a>
+              <button className="py-1 mx-auto w-24 text-center">一覧へ</button>
+            </a>
+          </Link>
+        </div>
       </div>
     </>
   );

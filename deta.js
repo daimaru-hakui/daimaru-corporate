@@ -1,15 +1,15 @@
 export const Menus = [
   {
     name: "Serenade",
-    link: "/serenade",
+    link: "/serenade/",
   },
   {
     name: "商品情報",
-    link: "/product",
+    link: "/product/",
   },
   {
     name: "会社情報",
-    link: "/company",
+    link: "/company/",
   },
   // {
   //   name: '店舗情報',
@@ -22,10 +22,10 @@ export const Menus = [
 
   {
     name: "採用情報",
-    link: "/recruit",
+    link: "/recruit/",
   },
   {
     name: "お問い合わせ",
-    link: "/contact",
+    link: "/contact/",
   },
 ];
