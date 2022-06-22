@@ -41,7 +41,7 @@ const Company = () => {
                 私たち大丸白衣は、今後も上質なユニフォームづくりを通して人と社会に貢献できるよう、不断の努力を続けてまいります。
               </p>
               <div className={"text-right mt-12"}>
-                取締役社長
+                代表取締役
                 <br />
                 中尾 仁美
               </div>
@@ -133,7 +133,7 @@ const Company = () => {
                 <div className={styles.companyRight}>昭和31年12月27日</div>
               </li>
               <li className={styles.companyItem}>
-                <div className={styles.companyLeft}>取締役社長</div>
+                <div className={styles.companyLeft}>代表取締役</div>
                 <div className={styles.companyRight}>中尾 仁美</div>
               </li>
               <li className={styles.companyItem}>
