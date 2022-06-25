@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import Head from 'next/head';
 import React from 'react';
-import Footer from '../../components/footer/Footer';
-import Header from '../../components/header/Header';
+import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
 
-const Shop = () => {
+const Csr = () => {
   return (
     <>
       <Head>
@@ -13,11 +13,11 @@ const Shop = () => {
       </Head>
       <Header />
       <main>
-        <div style={{ width: '100%', textAlign: 'center' }}>ショップ情報</div>
+        <div style={{ width: '100%', textAlign: 'center' }}>CSR</div>
       </main>
       <Footer />
     </>
   );
 };
 
-export default Shop;
+export default Csr;

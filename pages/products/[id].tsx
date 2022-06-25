@@ -1,9 +1,40 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
 
-const ProductId = ({ product }: any) => {
+const ProductId = ({ item }: any) => {
+  const [images, setImages] = useState([]);
+  const [imgCount, setImgCount] = useState(0);
+
+  useEffect(() => {
+    const array: any = [
+      item.image1 && item.image1.url,
+      item.image2 && item.image2.url,
+      item.image3 && item.image3.url,
+      item.image4 && item.image4.url,
+      item.image5 && item.image5.url,
+      item.image6 && item.image6.url,
+      item.image7 && item.image7.url,
+      item.image8 && item.image8.url,
+      item.image9 && item.image9.url,
+      item.image10 && item.image10.url,
+    ];
+    const images: any = [];
+    array.forEach((image: string | undefined) => {
+      if (image === undefined) return;
+      images.push(image);
+    });
+    setImages(images);
+  }, [item]);
+
+  const onImgNumber = (e: number) => {
+    setImgCount(e);
+  };
+
+  console.log(images);
+
   return (
     <>
       <Head>
@@ -13,18 +44,63 @@ const ProductId = ({ product }: any) => {
       <Header />
       <main>
         <section className={`m-full mb-28`}>
-          <div className={`inner p-6`}>
-            <div>{product.code}</div>
-            <div>
-              <img src={product.image1.url} alt={product.name} />
+          <div className={`inner-big p-6 tracking-widest`}>
+            <div className={`flex flex-col lg:flex-row mt-12`}>
+              <div className='w-full lg:w-7/12 lg:mr-12'>
+                <div>
+                  <img
+                    src={images[imgCount] + `?fit=crop&w=650&h=650`}
+                    alt={item.name}
+                    className={`transition-all ${
+                      images[imgCount] ? 'opacity-100 ' : 'opacity-0'
+                    }`}
+                  />
+                </div>
+              </div>
+              <div className='w-full lg:w-5/12'>
+                <div className='text-2xl'>{item.productNumber}</div>
+                <div className='text-2xl'>{item.productName}</div>
+                {item.price && (
+                  <div className='mt-4'>
+                    <span className='text-base mr-1'>
+                      {Math.floor(Number(item.price) * 1.1).toLocaleString() +
+                        '円'}
+                    </span>
+                    <span className='text-sm'>{`［税抜価格${item.price.toLocaleString()}円]`}</span>
+                  </div>
+                )}
+                <div
+                  className='mt-6 text-xl'
+                  dangerouslySetInnerHTML={{ __html: item.catchCopy }}
+                />
+                <div className='grid grid-cols-5 gap-2 mt-12'>
+                  {images.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image + `?fit=crop&w=80&h=80`}
+                      alt={item.productName + ' ' + '画像' + String(index + 1)}
+                      className={`cursor-pointer ${
+                        index == imgCount
+                          ? 'border border-black ease-out duration-300'
+                          : 'border border-white'
+                      }`}
+                      onClick={() => onImgNumber(index)}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
-            <div>
-              {product.productNumber} {product.productName}
+            <div className='w-full mx-auto'>
+              <div className='py-2 mt-12 text-lg border-b'>商品説明</div>
+              <div
+                className='mt-6 mx-auto lg:w-9/12'
+                dangerouslySetInnerHTML={{ __html: item.content }}
+              />
             </div>
-            <div dangerouslySetInnerHTML={{ __html: product.content }}></div>
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 };
@@ -64,11 +140,11 @@ export async function getStaticProps({ params }: any) {
   `,
     option
   );
-  const product = await res.json();
+  const item = await res.json();
 
   return {
     props: {
-      product,
+      item,
     },
   };
 }

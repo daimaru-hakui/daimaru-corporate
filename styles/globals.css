@@ -32,8 +32,6 @@ ul.slider .slick-dots {
   transform: translateY(-15%);
 }
 
-
-
 .slick-dots li button:before {
   color: rgb(35, 137, 233) !important;
 }
@@ -43,7 +41,11 @@ ul.slider .slick-dots {
     display: none;
   }
   .inner {
-    width:900px;
+    width: 900px;
+    margin: 0 auto;
+  }
+  .inner-big {
+    width: 1100px;
     margin: 0 auto;
   }
 }
