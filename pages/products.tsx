@@ -30,21 +30,29 @@ const Products: NextPage<Props> = ({ products }) => {
       <Header />
       <main>
         <section className={`m-full mb-28`}>
-          <div className={`inner p-6`}>
+          <div className={`inner-big p-6`}>
             <PageTitle titleH1='商品一覧' titleH2='Product List' />
-            <div className={`flex flex-row mt-16`}>
+            <div
+              className={`w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4`}
+            >
               {products.map((product) => (
-                <div key={product.id}>
-                  <div>
-                    <div className={`w-56`}>
-                      <a href={`/products/${product.id}`}>
-                        <img src={product.image1.url} width='250' />
-                      </a>
-                    </div>
-                    <div>
-                      {product.productNumber} {product.productName}
-                    </div>
-                    <div>価格 ￥{product.price} + 税</div>
+                <div key={product.id} className='mt-6'>
+                  <div className='w-full'>
+                    <a
+                      href={`/products/${product.id}`}
+                      className='flex justify-center'
+                    >
+                      <img
+                        src={`${product.image1.url}?w=600&h=600`}
+                        className='base:h-full sm:h-64 object-cover'
+                      />
+                    </a>
+                  </div>
+                  <div className='mt-2 text-sm'>
+                    {product.productNumber} {product.productName}
+                  </div>
+                  <div className='mt-1 text-sm'>
+                    価格 ￥{product.price} + 税
                   </div>
                 </div>
               ))}

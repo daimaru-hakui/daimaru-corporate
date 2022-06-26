@@ -32,8 +32,20 @@ ul.slider .slick-dots {
   transform: translateY(-15%);
 }
 
-.slick-dots li button:before {
-  color: rgb(35, 137, 233) !important;
+.product-slick img {
+  border: none;
+}
+
+ul.product-slick-dots {
+  width: 100%;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  display: grid !important;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-gap: 10px;
+}
+.product-slick-dots li {
+  width: 50px !important;
 }
 
 @media screen and (min-width: 900px) {
@@ -45,7 +57,7 @@ ul.slider .slick-dots {
     margin: 0 auto;
   }
   .inner-big {
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
   }
 }
