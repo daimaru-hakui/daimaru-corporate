@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from "next/head";
-import Link from "next/link";
-import React from "react";
-import Footer from "../components/footer/Footer";
-import Handling from "../components/handling/Handling";
-import Header from "../components/header/Header";
-import PageTitle from "../components/pagetitle/PageTitle";
-import styles from "../styles/product.module.scss";
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+import Footer from '../components/footer/Footer';
+import Handling from '../components/handling/Handling';
+import Header from '../components/header/Header';
+import PageTitle from '../components/pagetitle/PageTitle';
+import styles from '../styles/product.module.scss';
 
 const Product = () => {
   return (
@@ -19,14 +19,14 @@ const Product = () => {
         <section className={`m-full mb-28`}>
           <div className={`inner p-6`}>
             <PageTitle
-              titleH1="商品情報"
-              titleH2="Original Brand　/　オリジナルブランド"
+              titleH1='商品情報'
+              titleH2='Original Brand　/　オリジナルブランド'
             />
             <div className={`flex flex-wrap mt-24`}>
               <div className={`${styles.productLeft} mb-0 mx-auto md:mb-12`}>
                 <img
-                  src="./images/myuni-catalog-1.jpg"
-                  alt={"マイユニフォームクラブ　カタログ"}
+                  src='../images/myuni-catalog-1.jpg'
+                  alt={'マイユニフォームクラブ　カタログ'}
                 />
               </div>
               <div className={styles.productCenter} />
@@ -36,7 +36,7 @@ const Product = () => {
                 </h3>
                 <h4 className={`p-0 mt-3 mb-4 text-gray-400`}>
                   一期一会のひと時を紡ぎ出す
-                  <br className="br" />
+                  <br className='br' />
                   おもてなしの舞台へ。
                 </h4>
                 <p className={`text-md leading-loose`}>
@@ -60,12 +60,12 @@ const Product = () => {
             </div>
             <div
               className={`flex flex-wrap mt-24 mb-28`}
-              style={{ flexDirection: "row-reverse" }}
+              style={{ flexDirection: 'row-reverse' }}
             >
               <div className={`${styles.productLeft} mb-0 mx-auto md:mb-12`}>
                 <img
-                  src="./images/serenade-catalog-1.jpg"
-                  alt="セレナーデ　カタログ"
+                  src='../images/serenade-catalog-1.jpg'
+                  alt='セレナーデ　カタログ'
                   className={`object-cover mx-auto w-full`}
                 />
               </div>
@@ -107,13 +107,13 @@ const Product = () => {
             >
               オリジナルユニフォーム／オーダーメイド
             </h2>
-            <div className="w-full mx-auto">
-              <p className="text-xl font-bold tracking-wider leading-loose">
+            <div className='w-full mx-auto'>
+              <p className='text-xl font-bold tracking-wider leading-loose'>
                 その声をかたちに――
                 <br />
                 お客様だけのこだわりの一着
               </p>
-              <p className="text-sm leading-loose mt-3">
+              <p className='text-sm leading-loose mt-3'>
                 大丸白衣では、オーダーメイドのご用命も承っております。
                 <br />
                 国内自社工場に加え、国内外の協力工場での生産体制を確立しており、小ロットから大ロットまで幅広く対応可能です。
@@ -123,8 +123,8 @@ const Product = () => {
                 ぜひお気軽にご相談ください。
               </p>
             </div>
-            <div className="mt-6">
-              <img src="/images/order-made.jpg" alt="大丸白衣 オーダーメイド" />
+            <div className='mt-6'>
+              <img src='/images/order-made.jpg' alt='大丸白衣 オーダーメイド' />
             </div>
           </div>
         </section>
