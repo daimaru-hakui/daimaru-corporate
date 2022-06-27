@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { NextPage } from 'next';
-import { useEffect, useState } from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { NextPage } from "next";
+import { useEffect, useState } from "react";
+import styles from "./ProductImage.module.scss";
 
 const ProductImage: NextPage<any> = ({ item }) => {
   const [images, setImages] = useState([]);
@@ -11,6 +12,7 @@ const ProductImage: NextPage<any> = ({ item }) => {
 
   useEffect(() => {
     const array: any = [
+      item.image0 && item.image0.url,
       item.image1 && item.image1.url,
       item.image2 && item.image2.url,
       item.image3 && item.image3.url,
@@ -39,8 +41,8 @@ const ProductImage: NextPage<any> = ({ item }) => {
       );
     },
     dots: true,
-    className: 'product-slick',
-    dotsClass: 'product-slick-dots slick-thumb',
+    className: "product-slick",
+    dotsClass: "product-slick-dots slick-thumb",
     arrows: true,
     speed: 500,
     slidesToShow: 1,
@@ -49,17 +51,15 @@ const ProductImage: NextPage<any> = ({ item }) => {
 
   return (
     <>
-      <div className='slider w-full'>
+      <div className={`${styles.productSlider} w-full`}>
         <Slider {...settings}>
           {images.map((img, index) => (
             <img
               key={index}
-              src={`${img}?fm=webp`}
-              alt='画像'
+              src={`${img}?fm=webp&w=500`}
+              alt="画像"
               style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
+                objectFit: "cover",
               }}
             />
           ))}
