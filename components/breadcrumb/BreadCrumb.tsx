@@ -13,7 +13,7 @@ const BreadCrumb: NextPage<any> = ({ category, productCode, productName }) => {
         </Link>
       </div>
       <div className='mr-4'>{`>`}</div>
-      <div>
+      <div className='mr-4'>
         <Link href={`/products/${categorySlug}`}>
           <a>{categoryName}</a>
         </Link>
