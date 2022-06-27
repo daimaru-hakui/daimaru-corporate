@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
+import styles from "./ProductImage.module.scss";
 
 const ProductImage: NextPage<any> = ({ item }) => {
   const [images, setImages] = useState([]);
@@ -50,7 +51,7 @@ const ProductImage: NextPage<any> = ({ item }) => {
 
   return (
     <>
-      <div className="slider w-full">
+      <div className={`${styles.productSlider} w-full`}>
         <Slider {...settings}>
           {images.map((img, index) => (
             <img

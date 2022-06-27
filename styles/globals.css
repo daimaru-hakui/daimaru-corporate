@@ -46,6 +46,7 @@ ul.product-slick-dots {
 }
 .product-slick-dots li {
   width: 50px !important;
+  height: 50px !important
 }
 
 @media screen and (min-width: 900px) {
@@ -61,4 +62,5 @@ ul.product-slick-dots {
     width: 100%;
     margin: 0 auto;
   }
+
 }
