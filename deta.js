@@ -11,10 +11,10 @@ export const Menus = [
     name: "会社情報",
     link: "/company",
   },
-  // {
-  //   name: '店舗情報',
-  //   link: '/shop',
-  // },
+  {
+    name: "店舗情報",
+    link: "/shop",
+  },
   // {
   //   name: 'CSR',
   //   link: '/csr',
