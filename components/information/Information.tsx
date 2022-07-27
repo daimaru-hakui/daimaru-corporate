@@ -48,8 +48,10 @@ const Information: NextPage<Props> = ({ posts, directory }) => {
         </div>
         <div className={`${styles.infoBtn} border lg:absolute`}>
           <Link href={directory}>
-            <a>
-              <button className="py-1 mx-auto w-24 text-center">一覧へ</button>
+            <a className="block text-center">
+              <button className="py-1 mx-auto lg:w-24 text-center">
+                一覧へ
+              </button>
             </a>
           </Link>
         </div>
