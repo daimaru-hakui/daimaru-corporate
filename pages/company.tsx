@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import Head from 'next/head';
-import React from 'react';
-import Footer from '../components/footer/Footer';
-import Header from '../components/header/Header';
-import PageTitle from '../components/pagetitle/PageTitle';
-import styles from '../styles/Company.module.scss';
+import Head from "next/head";
+import React from "react";
+import Footer from "../components/footer/Footer";
+import Header from "../components/header/Header";
+import PageTitle from "../components/pagetitle/PageTitle";
+import styles from "../styles/Company.module.scss";
 
 const Company = () => {
   return (
@@ -12,15 +12,15 @@ const Company = () => {
       <Head>
         <title>大丸白衣 | 会社概要</title>
         <meta
-          name='description'
-          content='大丸白衣は食品業界向けユニフォーム、医療業界向け白衣、作業着、制服をご提案！異物混入対策や動きやすさにも対応。ユニフォームのレンタルも行っています。'
+          name="description"
+          content="大丸白衣は食品業界向けユニフォーム、医療業界向け白衣、作業着、制服をご提案！異物混入対策や動きやすさにも対応。ユニフォームのレンタルも行っています。"
         />
       </Head>
       <Header />
       <main>
         <section className={`m-full`}>
           <div className={`inner p-6 pb-0 mb-12`}>
-            <PageTitle titleH1='会社情報' titleH2='message' />
+            <PageTitle titleH1="会社情報" titleH2="message" />
             <article className={`my-12 text-sm`}>
               <p className={`mb-6`}>
                 昭和6年、私たち大丸白衣は、その名の通り白衣専門店として大阪の地で創業しました。
@@ -40,7 +40,7 @@ const Company = () => {
               <p className={`mb-6`}>
                 私たち大丸白衣は、今後も上質なユニフォームづくりを通して人と社会に貢献できるよう、不断の努力を続けてまいります。
               </p>
-              <div className={'text-right mt-12'}>
+              <div className={"text-right mt-12"}>
                 代表取締役
                 <br />
                 中尾 仁美
@@ -50,7 +50,7 @@ const Company = () => {
         </section>
         <section className={`m-full mb-12`}>
           <div className={`inner p-6`}>
-            <PageTitle titleH1={null} titleH2='会社概要' />
+            <PageTitle titleH1={null} titleH2="会社概要" />
             <ul className={`text-sm`}>
               <li className={`${styles.companyItem}`}>
                 <div className={styles.companyLeft}>会社名</div>
@@ -66,7 +66,7 @@ const Company = () => {
                     <br />
                     営業部｜
                     <br className={styles.companyBr} />
-                    Tel : 06-6632-0891（代表）{' '}
+                    Tel : 06-6632-0891（代表）{" "}
                     <br className={styles.companyBr} />
                     Fax : 06-6641-9200
                     <br />
@@ -155,22 +155,22 @@ const Company = () => {
         </section>
         <section className={`m-full mb-32`}>
           <div className={`inner p-6`}>
-            <PageTitle titleH1={null} titleH2='会社沿革' />
-            <div className='flex justify-center w-12/12 mx-auto text-center my-12'>
-              <div className='mr-4'>
+            <PageTitle titleH1={null} titleH2="会社沿革" />
+            <div className="flex justify-center w-12/12 mx-auto text-center my-12">
+              <div className="mr-4">
                 <img
-                  src='/images/history-1.jpg'
-                  width='400px'
-                  height='300px'
-                  className='rounded'
+                  src="/images/history-1.jpg"
+                  width="400px"
+                  height="300px"
+                  className="rounded"
                 />
               </div>
-              <div className=''>
+              <div className="">
                 <img
-                  src='/images/history-2.jpg'
-                  width='400px'
-                  height='300px'
-                  className='rounded'
+                  src="/images/history-2.jpg"
+                  width="400px"
+                  height="300px"
+                  className="rounded"
                 />
               </div>
             </div>
@@ -228,7 +228,7 @@ const Company = () => {
               <li className={styles.companyItem}>
                 <div className={styles.companyLeft}>昭和45年</div>
                 <div className={styles.companyRight}>
-                  台湾台南県将軍郷忠興に5,000坪の合併工場を設立
+                  台湾台南県将軍郷忠興に5,000坪の合弁工場を設立
                 </div>
               </li>
               <li className={styles.companyItem}>
