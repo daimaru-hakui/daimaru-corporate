@@ -1,27 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { NextPage } from 'next';
-import { useEffect, useState } from 'react';
-import styles from './ProductImage.module.scss';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { NextPage } from "next";
+import { useEffect, useState } from "react";
+import styles from "./ProductImage.module.scss";
 
 const ProductImage: NextPage<any> = ({ item }) => {
-  const [images, setImages] = useState([]);
-  const [imgCount, setImgCount] = useState(0);
+  const [images, setImages] = useState<String[]>([]);
 
   useEffect(() => {
-    const images: any = [];
+    let array: string[] = [];
     for (let i = 0; i <= 10; i++) {
-      if (item['image' + i]) {
-        images.push(item['image' + i]['url']);
+      if (item["image" + i]) {
+        array.push(item["image" + i]["url"]);
       }
     }
-    setImages(images);
+    setImages(array);
   }, [item]);
 
   const settings = {
-    customPaging: function (index: any) {
+    customPaging: function (index: number) {
       return (
         <a>
           <img src={`${images[index]}`} alt={`画像${index}`} />
@@ -29,8 +28,8 @@ const ProductImage: NextPage<any> = ({ item }) => {
       );
     },
     dots: true,
-    className: 'product-slick',
-    dotsClass: 'product-slick-dots slick-thumb',
+    className: "product-slick",
+    dotsClass: "product-slick-dots slick-thumb",
     arrows: true,
     speed: 500,
     slidesToShow: 1,
@@ -38,22 +37,13 @@ const ProductImage: NextPage<any> = ({ item }) => {
   };
 
   return (
-    <>
-      <div className={`${styles.productSlider} w-full`}>
-        <Slider {...settings}>
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={`${img}?fm=webp&w=500`}
-              alt='画像'
-              style={{
-                objectFit: 'cover',
-              }}
-            />
-          ))}
-        </Slider>
-      </div>
-    </>
+    <div className={`${styles.productSlider} w-full`}>
+      <Slider {...settings}>
+        {images.map((img, index) => (
+          <img key={index} src={`${img}?fm=webp&w=900`} alt="画像" />
+        ))}
+      </Slider>
+    </div>
   );
 };
 export default ProductImage;

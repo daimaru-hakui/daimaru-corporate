@@ -1,26 +1,37 @@
-import { NextPage } from 'next';
-import Link from 'next/link';
-import React from 'react';
+import { minHeight } from "@mui/system";
+import { NextPage } from "next";
+import Link from "next/link";
+import React from "react";
 
 const BreadCrumb: NextPage<any> = ({ category, productCode, productName }) => {
   const categoryName = category.name;
   const categorySlug = category.slug;
   return (
-    <div className='flex text-xs'>
-      <div className='mr-4'>
-        <Link href={'/'}>
+    <div className="flex text-xs">
+      <div className="mr-4">
+        <Link href={"/"}>
           <a>ホーム</a>
         </Link>
       </div>
-      <div className='mr-4'>{`>`}</div>
-      <div className='mr-4'>
-        <Link href={`/products/${categorySlug}`}>
-          <a>{categoryName}</a>
+      <div className="mr-4">{`>`}</div>
+      <div className="mr-4">
+        <Link href={`/products/`}>
+          <a>商品一覧</a>
         </Link>
       </div>
-      <div className='mr-4'>{`>`}</div>
+      {categoryName && (
+        <>
+          <div className="mr-4">{`>`}</div>
+          <div className="mr-4">
+            <Link href={`/products/${categorySlug}`}>
+              <a>{categoryName}</a>
+            </Link>
+          </div>
+        </>
+      )}
+      <div className="mr-4">{`>`}</div>
       <div>
-        <span className='mr-1'>{productCode}</span>
+        <span className="mr-1">{productCode}</span>
         {productName}
       </div>
     </div>

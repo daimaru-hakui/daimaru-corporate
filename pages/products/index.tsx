@@ -52,12 +52,12 @@ const Products: NextPage<Props> = ({ products }) => {
                       </a>
                     )}
                   </div>
-                  <div className="mt-2 text-sm">
+                  <div className="mt-2 text-xs text-center">
                     {product.productNumber} {product.productName}
                   </div>
-                  <div className="mt-1 text-sm">
+                  {/* <div className="mt-1 text-xs">
                     価格 ￥{product.price} + 税
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>
@@ -78,7 +78,7 @@ export async function getStaticProps() {
     },
   };
   const res = await fetch(
-    `https://zbo8y0zyr4.microcms.io/api/v1/products`,
+    `https://zbo8y0zyr4.microcms.io/api/v1/products?limit=100`,
     option
   );
   const resJson = await res.json();
