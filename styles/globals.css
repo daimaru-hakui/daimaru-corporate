@@ -8,8 +8,8 @@ body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-  font-family: 'Noto Serif JP', '游ゴシック体', 'Yu Gothic', YuGothic,
-    'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo,
+  font-family: "Noto Serif JP", "游ゴシック体", "Yu Gothic", YuGothic,
+    "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo,
     sans-serif;
 }
 
@@ -41,12 +41,17 @@ ul.product-slick-dots {
   margin-right: 1rem;
   margin-top: 1rem;
   display: grid !important;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-gap: 10px;
 }
 .product-slick-dots li {
-  width: 50px !important;
-  height: 50px !important
+  width: 100px !important;
+  height: 100px !important;
+}
+.product-slick-dots li img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (min-width: 900px) {
@@ -62,5 +67,4 @@ ul.product-slick-dots {
     width: 100%;
     margin: 0 auto;
   }
-
 }

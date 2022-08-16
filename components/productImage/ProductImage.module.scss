@@ -1,5 +1,8 @@
 .productSlider {
   width: 100%;
+  & img {
+    object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 1024px) {
