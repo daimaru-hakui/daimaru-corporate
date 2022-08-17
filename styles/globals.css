@@ -32,9 +32,9 @@ ul.slider .slick-dots {
   transform: translateY(-15%);
 }
 
-.product-slick img {
+/* .product-slick img {
   border: none;
-}
+} */
 
 ul.product-slick-dots {
   width: 100%;
