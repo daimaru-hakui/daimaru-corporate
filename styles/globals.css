@@ -44,10 +44,10 @@ ul.product-slick-dots {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-gap: 10px;
 }
-.product-slick-dots li {
+/* .product-slick-dots li {
   width: 100px !important;
   height: 100px !important;
-}
+} */
 .product-slick-dots li img {
   object-fit: cover;
   width: 100%;

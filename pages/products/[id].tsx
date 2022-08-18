@@ -4,10 +4,11 @@ import Link from "next/link";
 import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import ProductImage from "../../components/productImage/ProductImage";
+import ProductImage from "../../components/products/productImage/ProductImage";
 import styles from "./ProductId.module.scss";
 
 const ProductId = ({ item }: any) => {
+  const TAX = 1.1;
   return (
     <>
       <Head>
@@ -56,19 +57,21 @@ const ProductId = ({ item }: any) => {
               <div className="mt-12 lg:mt-0 w-full lg:w-6/12">
                 <div className="text-2xl">{item.productNumber}</div>
                 <div className="text-2xl">{item.productName}</div>
-                {item.price && (
+                {item.price ? (
                   <div className="mt-3">
                     <span className="text-base mr-1">
-                      {Math.floor(Number(item.price) * 1.1).toLocaleString() +
+                      {Math.floor(Number(item.price) * TAX).toLocaleString() +
                         "円"}
                     </span>
                     <span className="text-sm">{`［税抜価格${item.price.toLocaleString()}円]`}</span>
                   </div>
+                ) : (
+                  <div className="mt-3">
+                    <span className="text-base mr-1 whitespace-pre-wrap">
+                      {item.priceText}
+                    </span>
+                  </div>
                 )}
-                <div
-                  className="mt-8 text-xl font-bold"
-                  dangerouslySetInnerHTML={{ __html: item.catchCopy }}
-                />
                 <div className="text-sm mt-8">
                   カラー：
                   {item.color.map(
