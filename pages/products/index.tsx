@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import React from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
@@ -20,6 +21,11 @@ interface Props {
       url: string;
     };
     price: number;
+    imagesColor: {
+      image: {
+        url: string;
+      };
+    }[];
   }[];
 }
 
@@ -40,16 +46,15 @@ const Products: NextPage<Props> = ({ products }) => {
               {products.map((product) => (
                 <div key={product.id} className="mt-6">
                   <div className="w-full">
-                    {product.image0 && (
-                      <a
-                        href={`/products/${product.id}`}
-                        className="flex justify-center"
-                      >
-                        <img
-                          src={`${product.image0.url}?w=600&h=600`}
-                          className="base:h-full sm:h-64 object-cover"
-                        />
-                      </a>
+                    {product.imagesColor && (
+                      <Link href={`/products/${product.id}`}>
+                        <a className="flex justify-center">
+                          <img
+                            src={`${product.imagesColor[0].image.url}?w=600&h=600`}
+                            className="base:h-full sm:h-64 object-cover"
+                          />
+                        </a>
+                      </Link>
                     )}
                   </div>
                   <div className="mt-2 text-xs text-center">
