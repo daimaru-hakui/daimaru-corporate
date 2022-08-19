@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
-import styles from "./ProductImage.module.scss";
+import styles from "./ProductSlider.module.scss";
 
-const ProductImage: NextPage<any> = ({ item }) => {
+const ProductSlider: NextPage<any> = ({ item }) => {
   const [images, setImages] = useState<String[]>([]); //画像を配列として格納
   const [lensX, setLensX] = useState(0);
   const [lensY, setLensY] = useState(0);
@@ -24,13 +24,21 @@ const ProductImage: NextPage<any> = ({ item }) => {
 
   //画像を取得して配列に格納
   useEffect(() => {
-    let array: string[] = [];
-    for (let i = 0; i <= 10; i++) {
-      if (item["image" + i]) {
-        array.push(item["image" + i]["url"]);
+    let arrayColor: string[] = [];
+    for (let i = 0; i < item.imagesColor.length; i++) {
+      if (item.imagesColor[i]) {
+        arrayColor.push(item.imagesColor[i].image.url);
       }
     }
-    setImages(array);
+
+    let arrayDetail: string[] = [];
+    for (let i = 0; i < item.imagesDetail.length; i++) {
+      if (item.imagesDetail[i]) {
+        arrayDetail.push(item.imagesDetail[i].image.url);
+      }
+    }
+
+    setImages([...arrayColor, ...arrayDetail]);
   }, [item]);
 
   const settings = {
@@ -87,4 +95,4 @@ const ProductImage: NextPage<any> = ({ item }) => {
     </div>
   );
 };
-export default ProductImage;
+export default ProductSlider;

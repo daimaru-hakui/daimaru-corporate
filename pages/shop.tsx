@@ -36,7 +36,7 @@ const Shop = () => {
       </Head>
       <Header />
       <main>
-        <section className={`m-full`}>
+        <section className={`m-full mb-28`}>
           <div className={`inner-big p-6 pb-0 mb-12`}>
             <PageTitle titleH1="店舗情報" titleH2="Shop Information" />
             <div className="flex flex-col justify-center md:flex-row tracking-wider">

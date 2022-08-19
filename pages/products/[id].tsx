@@ -4,7 +4,7 @@ import Link from "next/link";
 import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import ProductImage from "../../components/products/productImage/ProductImage";
+import ProductSlider from "../../components/products/productSlider/ProductSlider";
 import styles from "./ProductId.module.scss";
 
 const ProductId = ({ item }: any) => {
@@ -12,12 +12,12 @@ const ProductId = ({ item }: any) => {
   return (
     <>
       <Head>
-        <title>大丸白衣 | 商品情報</title>
+        <title>大丸白衣 | {`${item.productNumber} ${item.productName}`}</title>
       </Head>
       <Header />
       <main>
         <section className={`m-full mb-28`}>
-          <div className={`inner-big p-6 tracking-widest`}>
+          <div className={`inner-big mx-auto p-6 tracking-widest`}>
             <BreadCrumb
               category={item.category[0] || ""}
               productName={item.productName}
@@ -26,26 +26,26 @@ const ProductId = ({ item }: any) => {
             <div className={`flex flex-col lg:flex-row mt-12 w-full`}>
               {/* {左カラム} */}
               <div className={`${styles.leftArea} w-full lg:mr-12 `}>
-                <ProductImage item={item} />
+                <ProductSlider item={item} />
 
                 {item.relation[0] && (
                   <>
                     <div className="py-2 mt-8 text-base border-b">関連商品</div>
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mt-8">
-                      {item.relation.map((r: any) => (
-                        <div key={r.id}>
-                          <Link href={`/products/${r.id}`}>
+                      {item.relation.map((item: any) => (
+                        <div key={item.id}>
+                          <Link href={`/products/${item.id}`}>
                             <a className="flex flex-col">
                               <img
-                                src={`${r.image0.url}?W=300&H=300`}
-                                alt={r.productNumber}
+                                src={`${item.imagesColor[0].image.url}?W=300&H=300`}
+                                alt={item.productNumber}
                                 className="lg:w-44 lg:h-44 object-cover"
                               />
                             </a>
                           </Link>
                           <div className="text-xs mt-2">
-                            <span className="mr-2">{r.productNumber}</span>
-                            {r.productName}
+                            <span className="mr-2">{item.productNumber}</span>
+                            {item.productName}
                           </div>
                         </div>
                       ))}
@@ -88,11 +88,16 @@ const ProductId = ({ item }: any) => {
                   )}
                 </div>
                 <div className="mt-1 text-sm">素　材：{item.material}</div>
-                <div className="py-2 mt-8 text-base border-b">商品説明</div>
-                <div
-                  className="mt-6 mx-auto text-sm"
-                  dangerouslySetInnerHTML={{ __html: item.content }}
-                />
+                <div className="mt-1 text-sm">生　地：{item.materialName}</div>
+                {item.content && (
+                  <>
+                    <div className="py-2 mt-8 text-base border-b">商品説明</div>
+                    <div
+                      className="mt-3 mx-auto text-sm"
+                      dangerouslySetInnerHTML={{ __html: item.content }}
+                    />
+                  </>
+                )}
                 <div
                   className="mt-6"
                   dangerouslySetInnerHTML={{ __html: item.size }}
@@ -117,7 +122,7 @@ export async function getStaticPaths() {
     },
   };
   const res = await fetch(
-    `https://zbo8y0zyr4.microcms.io/api/v1/products?limit=20`,
+    `https://zbo8y0zyr4.microcms.io/api/v1/products?limit=100`,
     option
   );
   const resJson = await res.json();
