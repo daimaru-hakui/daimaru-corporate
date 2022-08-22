@@ -9,6 +9,7 @@ import OpenInNewTwoToneIcon from "@mui/icons-material/OpenInNewTwoTone";
 import CloseIcon from "@mui/icons-material/Close";
 import Modal from "@mui/material/Modal";
 import { Box } from "@mui/system";
+import { NextPage } from "next";
 
 const style = {
   position: "absolute" as "absolute",
@@ -22,7 +23,19 @@ const style = {
   boxShadow: 24,
   p: "0 15px 15px",
 };
-const Shop = () => {
+
+type Props = {
+  images: {
+    calendarOsaka: {
+      url: string;
+    };
+    calendarKobe: {
+      url: string;
+    };
+  };
+};
+
+const Shop: NextPage<Props> = ({ images }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -81,11 +94,13 @@ const Shop = () => {
                       <CloseIcon />
                       <span className="text-sm">閉じる</span>
                     </div>
-                    <img
-                      src="/images/calendar-osaka.png"
-                      className="mx-auto"
-                      alt="カレンダー"
-                    />
+                    {images.calendarOsaka && (
+                      <img
+                        src={images.calendarOsaka.url}
+                        className="mx-auto"
+                        alt="カレンダー"
+                      />
+                    )}
                   </Box>
                 </Modal>
                 <div className="mt-9">
@@ -141,11 +156,13 @@ const Shop = () => {
                       <CloseIcon />
                       <span className="text-sm">閉じる</span>
                     </div>
-                    <img
-                      src="/images/calendar-kobe.png"
-                      className="mx-auto"
-                      alt="カレンダー"
-                    />
+                    {images.calendarKobe && (
+                      <img
+                        src={images.calendarKobe.url}
+                        className="mx-auto"
+                        alt="カレンダー"
+                      />
+                    )}
                   </Box>
                 </Modal>
                 <div className="mt-9">
@@ -168,3 +185,19 @@ const Shop = () => {
 };
 
 export default Shop;
+
+export async function getStaticProps() {
+  const accessPoint = "https://daimarucorporate.microcms.io/api/v1";
+  const option: {} = {
+    headers: {
+      "X-MICROCMS-API-KEY": "0d40d76b88e947a48c98d0320506b1927c9f",
+    },
+  };
+  const res = await fetch(`${accessPoint}/images`, option);
+  const images = await res.json();
+  return {
+    props: {
+      images,
+    },
+  };
+}

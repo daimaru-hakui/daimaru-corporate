@@ -19,15 +19,6 @@ interface Props {
     date: string;
   }[];
   images: {
-    daimaruTopImg1: {
-      url: string;
-    };
-    daimaruTopImg2: {
-      url: string;
-    };
-    daimaruTopImg3: {
-      url: string;
-    };
     catalogSerenadeImg1: {
       url: string;
       width: string;
@@ -38,6 +29,11 @@ interface Props {
       width: string;
       height: string;
     };
+    topImage: {
+      image: {
+        url: string;
+      };
+    }[];
   };
 }
 
