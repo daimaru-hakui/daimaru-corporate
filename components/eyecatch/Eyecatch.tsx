@@ -6,18 +6,15 @@ import styles from "./Eyecatch.module.scss";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
 
-interface Props {
+type Props = {
   images: {
     topImage: {
       image: {
         url: string;
       };
     }[];
-    daimaruTopImg1: { url: string };
-    daimaruTopImg2: { url: string };
-    daimaruTopImg3: { url: string };
   };
-}
+};
 
 const Eyecatch: NextPage<Props> = ({ images }) => {
   const [imgArray, setImageArray] = useState([]);
