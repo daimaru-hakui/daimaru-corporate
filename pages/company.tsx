@@ -16,7 +16,6 @@ const Company = () => {
           content="大丸白衣は食品業界向けユニフォーム、医療業界向け白衣、作業着、制服をご提案！異物混入対策や動きやすさにも対応。ユニフォームのレンタルも行っています。"
         />
       </Head>
-      <Header />
       <main>
         <section className={`m-full`}>
           <div className={`inner p-6 pb-0 mb-12`}>
@@ -285,7 +284,6 @@ const Company = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

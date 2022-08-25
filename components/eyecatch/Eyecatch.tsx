@@ -40,7 +40,6 @@ const Eyecatch: NextPage<Props> = ({ images }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(imgArray);
   return (
     <>
       <div

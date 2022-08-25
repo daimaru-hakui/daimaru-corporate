@@ -47,7 +47,7 @@ const Shop: NextPage<Props> = ({ images }) => {
       <Head>
         <title>大丸白衣 | 店舗情報</title>
       </Head>
-      <Header />
+
       <main>
         <section className={`m-full mb-28`}>
           <div className={`inner-big p-6 pb-0 mb-12`}>
@@ -179,7 +179,6 @@ const Shop: NextPage<Props> = ({ images }) => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

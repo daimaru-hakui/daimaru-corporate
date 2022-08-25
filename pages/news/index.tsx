@@ -29,7 +29,6 @@ const News: NextPage<Props> = ({ posts }) => {
           content="大丸白衣は食品業界向けユニフォーム、医療業界向け白衣、作業着、制服をご提案！異物混入対策や動きやすさにも対応。ユニフォームのレンタルも行っています。"
         />
       </Head>
-      <Header />
       <main>
         <div className={`inner p-6`}>
           <PageTitle titleH1="お知らせ一覧" titleH2="News" />
