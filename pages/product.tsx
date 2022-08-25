@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Link from "next/link";
 import React from "react";
-import Footer from "../components/footer/Footer";
 import Handling from "../components/handling/Handling";
-import Header from "../components/header/Header";
 import PageTitle from "../components/pagetitle/PageTitle";
 import styles from "../styles/product.module.scss";
 
@@ -19,7 +16,6 @@ const Product = () => {
         content="フードサービス、フードファクトリー、といった「食」にかかわるユニフォームや資材のブランドです。
         食の安全を大切に、早くから制菌・抗菌や制電・防汚などの機能性素材を積極的に採用した製品づくりを行っています。多くのロングセラー商品を展開する安心のブランドです。"
       />
-      <Header />
       <main>
         <section className={`m-full mb-28`}>
           <div className={`inner p-6`}>
@@ -134,7 +130,6 @@ const Product = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

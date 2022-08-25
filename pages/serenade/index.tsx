@@ -1,11 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { NextPage } from 'next';
-import Head from 'next/head';
-import React from 'react';
-import Footer from '../../components/footer/Footer';
-import Header from '../../components/header/Header';
-import Information from '../../components/information/Information';
-import styles from './Serenade.module.scss';
+import { NextPage } from "next";
+import Head from "next/head";
+import React from "react";
+import Information from "../../components/information/Information";
+import styles from "./Serenade.module.scss";
 
 interface Props {
   posts: {
@@ -40,7 +38,6 @@ const Serenade: NextPage<Props> = ({ posts, images }) => {
           Serenade | 強く、美しい人へ。メディカルウェアユニフォーム 大丸白衣
         </title>
       </Head>
-      <Header />
       <main>
         <div
           className={`${styles.serenadeContainer} mx-auto flex flex-col lg:flex-row mt-6`}
@@ -48,7 +45,7 @@ const Serenade: NextPage<Props> = ({ posts, images }) => {
           <div className={`w-full lg:w-7/12`}>
             <img
               src={`${images.serenadeTopImg.url}?fm=webp`}
-              alt='serenade イメージ画像'
+              alt="serenade イメージ画像"
               width={images.serenadeTopImg.width}
               height={images.serenadeTopImg.height}
             />
@@ -89,13 +86,13 @@ const Serenade: NextPage<Props> = ({ posts, images }) => {
             <h2 className={`text-3xl`}>DIGITAL CATALOG</h2>
             <div className={`mx-auto border mt-12 lg:w-8/12`}>
               <a
-                href='https://my.ebook5.net/daimaru-hakui/serenade-vol5/'
-                target='_blank'
-                rel='noopener noreferrer'
+                href="https://my.ebook5.net/daimaru-hakui/serenade-vol5/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   src={`${images.catalogSerenadeImg2.url}?fm=webp`}
-                  alt='serenade デジタルカタログ'
+                  alt="serenade デジタルカタログ"
                   width={images.catalogSerenadeImg2.width}
                   height={images.catalogSerenadeImg2.height}
                 />
@@ -103,9 +100,9 @@ const Serenade: NextPage<Props> = ({ posts, images }) => {
             </div>
             <button>
               <a
-                href='https://my.ebook5.net/daimaru-hakui/serenade-vol5/'
-                target='_blank'
-                rel='noopener noreferrer'
+                href="https://my.ebook5.net/daimaru-hakui/serenade-vol5/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block text-sm border px-12 py-3 mt-12 hover:bg-black hover:text-white ease-in duration-200`}
               >
                 デジタルカタログを見る
@@ -113,9 +110,8 @@ const Serenade: NextPage<Props> = ({ posts, images }) => {
             </button>
           </div>
         </div>
-        <Information posts={posts} directory={'/serenade/news'} />
+        <Information posts={posts} directory={"/serenade/news"} />
       </main>
-      <Footer />
     </>
   );
 };
@@ -123,16 +119,16 @@ const Serenade: NextPage<Props> = ({ posts, images }) => {
 export default Serenade;
 
 export async function getStaticProps() {
-  const accessPoint1 = 'https://serenade.microcms.io/api/v1';
+  const accessPoint1 = "https://serenade.microcms.io/api/v1";
   const option1: {} = {
     headers: {
-      'X-MICROCMS-API-KEY': 'd6bb628f48544d69a1adb92e4c51261c636f',
+      "X-MICROCMS-API-KEY": "d6bb628f48544d69a1adb92e4c51261c636f",
     },
   };
-  const accessPoint2 = 'https://daimarucorporate.microcms.io/api/v1';
+  const accessPoint2 = "https://daimarucorporate.microcms.io/api/v1";
   const option2: {} = {
     headers: {
-      'X-MICROCMS-API-KEY': '0d40d76b88e947a48c98d0320506b1927c9f',
+      "X-MICROCMS-API-KEY": "0d40d76b88e947a48c98d0320506b1927c9f",
     },
   };
   const newsRes = await fetch(`${accessPoint1}/news`, option1);

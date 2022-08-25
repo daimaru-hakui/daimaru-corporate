@@ -10,7 +10,6 @@ const Recruit = () => {
       <Head>
         <title>大丸白衣 | 採用情報</title>
       </Head>
-      <Header />
       <main>
         <section className={`m-full mb-28`}>
           <div className={`inner p-6`}>
@@ -22,7 +21,6 @@ const Recruit = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

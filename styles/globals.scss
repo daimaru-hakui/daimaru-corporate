@@ -68,3 +68,44 @@ ul.product-slick-dots {
     margin: 0 auto;
   }
 }
+
+.color {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: block;
+  &-20 {
+    background-color: #fff;
+  }
+  &-11 {
+    background-color: rgb(241, 207, 234);
+  }
+  &-06 {
+    background-color: rgb(193, 216, 235);
+  }
+  &-10 {
+    background-color: rgb(38, 45, 141);
+  }
+  &-08 {
+    background-color: rgb(141, 38, 64);
+  }
+  &-21 {
+    background-color: rgb(3, 83, 3);
+  }
+  &-07 {
+    background-color: rgb(64, 66, 64);
+  }
+  &-28 {
+    background-color: rgb(233, 115, 115);
+  }
+  &-05 {
+    background-color: rgb(196, 163, 238);
+  }
+  &-09 {
+    background-color: rgb(56, 191, 196);
+  }
+  &-04 {
+    background-color: rgb(196, 56, 114);
+  }
+}

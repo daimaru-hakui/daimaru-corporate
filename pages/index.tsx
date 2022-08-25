@@ -3,8 +3,6 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Eyecatch from "../components/eyecatch/Eyecatch";
 import Information from "../components/information/Information";
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
 import Catalog from "../components/catalog/Catalog";
 
 interface Props {
@@ -49,13 +47,11 @@ const Home: NextPage<Props> = ({ posts, images }) => {
           content="大丸白衣は食品業界向けユニフォーム、医療業界向け白衣、作業着、制服をご提案！異物混入対策や動きやすさにも対応。ユニフォームのレンタルも行っています。"
         />
       </Head>
-      <Header />
       <main>
         <Eyecatch images={images} />
         <Catalog images={images} />
         <Information posts={posts} directory={"/news"} />
       </main>
-      <Footer />
     </>
   );
 };

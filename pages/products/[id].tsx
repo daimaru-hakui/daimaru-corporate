@@ -14,7 +14,6 @@ const ProductId = ({ item }: any) => {
       <Head>
         <title>大丸白衣 | {`${item.productNumber} ${item.productName}`}</title>
       </Head>
-      <Header />
       <main>
         <section className={`m-full mb-28`}>
           <div className={`inner-big mx-auto p-6 tracking-widest`}>
@@ -74,7 +73,7 @@ const ProductId = ({ item }: any) => {
                 )}
                 <div className="text-sm mt-8">
                   カラー：
-                  {item.color.map(
+                  {item.colors.map(
                     (
                       c: { id: string; colorName: string; colorNumber: string },
                       index: number
@@ -82,7 +81,7 @@ const ProductId = ({ item }: any) => {
                       <span key={c.id}>
                         {c.colorName}
                         {c.colorNumber}
-                        {item.color.length == index + 1 ? "" : "・"}
+                        {item.colors.length == index + 1 ? "" : "・"}
                       </span>
                     )
                   )}
@@ -108,7 +107,6 @@ const ProductId = ({ item }: any) => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };
