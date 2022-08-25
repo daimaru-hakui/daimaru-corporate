@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import Head from "next/head";
-import React from "react";
-import Footer from "../components/footer/Footer";
-import Header from "../components/header/Header";
+import Head from 'next/head';
+import React from 'react';
 
 const Recruit = () => {
   return (

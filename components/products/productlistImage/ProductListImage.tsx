@@ -1,6 +1,6 @@
-import { NextPage } from "next";
-import Link from "next/link";
-import React, { useState } from "react";
+import { NextPage } from 'next';
+import Link from 'next/link';
+import React, { useState } from 'react';
 
 type Props = {
   product: {
@@ -22,23 +22,23 @@ type Props = {
   };
 };
 
-const ProductImage: NextPage<Props> = ({ product }) => {
+const ProductListImage: NextPage<Props> = ({ product }) => {
   const [colorChange, setColorChange] = useState(0);
   const onColorChange = (e: any) => {
     setColorChange(e.target.dataset.num);
   };
   return (
-    <div key={product.id} className="mt-6">
-      <div className="w-full">
+    <div key={product.id} className='mt-6'>
+      <div className='w-full'>
         {product.imagesColor && (
           <Link href={`/products/${product.id}`}>
-            <a className="flex justify-center">
+            <a className='flex justify-center'>
               {product.imagesColor.map(
                 (image, index) =>
                   index == colorChange && (
                     <img
                       src={`${image.image.url}?w=600&h=600`}
-                      className="base:h-full sm:h-64 object-cover"
+                      className='base:h-full sm:h-64 object-cover'
                     />
                   )
               )}
@@ -50,17 +50,17 @@ const ProductImage: NextPage<Props> = ({ product }) => {
           </Link>
         )}
       </div>
-      <div className="flex justify-center mt-2">
+      <div className='flex justify-center mt-2'>
         {product.colors.map((color, index) => (
           <span
             key={color.id}
             data-num={index}
             onClick={(e: any) => onColorChange(e)}
-            className={`mx-1 color color-${color.colorNumber}`}
+            className={`cursor-pointer mx-1 color color-${color.colorNumber}`}
           ></span>
         ))}
       </div>
-      <div className="mt-2 text-xs text-center">
+      <div className='mt-2 text-xs text-center'>
         {product.productNumber} {product.productName}
       </div>
       {/* <div className="mt-1 text-xs">
@@ -70,4 +70,4 @@ const ProductImage: NextPage<Props> = ({ product }) => {
   );
 };
 
-export default ProductImage;
+export default ProductListImage;
