@@ -40,6 +40,14 @@ const Eyecatch: NextPage<Props> = ({ images }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const onScrollClick = (e: React.MouseEvent<HTMLElement>) => {
+    e.stopPropagation();
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <div
@@ -55,15 +63,21 @@ const Eyecatch: NextPage<Props> = ({ images }) => {
           {imgArray.map((img, index) => (
             <div key={index.toString()}>
               <img
+                className={styles.slideImg}
                 src={`${img}?fm=webp`}
                 alt="トップイメージ"
-                style={{ width: "100%", height: "85vh", objectFit: "cover" }}
               />
             </div>
           ))}
         </Slick>
         <div className={styles.catchCopy}>
           一級品のユニフォームを手頃に手軽に届けたい。
+        </div>
+        <div
+          className={`${styles.scrolldown} cursor-pointer`}
+          onClick={(e) => onScrollClick(e)}
+        >
+          <span>Scroll</span>
         </div>
       </div>
     </>
