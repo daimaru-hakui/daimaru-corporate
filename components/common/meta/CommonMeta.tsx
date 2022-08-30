@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 type Props = {
   siteName: string | null | undefined;
@@ -16,17 +17,18 @@ const CommonMeta: NextPage<Props> = ({
   url,
   type,
 }) => {
-  const webTitle = "大丸白衣 | ";
+  const router = useRouter();
+  const webTitle = router.pathname === "/" ? "" : "｜株式会社大丸白衣 ";
   return (
     <Head>
-      <title>{webTitle + title}</title>
+      <title>{title + webTitle}</title>
       <meta name="description" content={description} />
       <meta
         property="og:site_name"
-        content={siteName ? webTitle + siteName : webTitle + title}
+        content={siteName ? siteName + webTitle : title + webTitle}
         key="site_name"
       />
-      <meta property="og:title" content={webTitle + title} key="title" />
+      <meta property="og:title" content={title + webTitle} key="title" />
       <meta property="og:description" content={description} key="description" />
       <meta
         property="og:url"
@@ -34,8 +36,10 @@ const CommonMeta: NextPage<Props> = ({
         key="url"
       />
       <meta property="og:type" content={type || "article"} key="type" />
+      <meta property="og:locale" content="ja_JP" />
       <meta name="twitter:card" content="summary" key="tw_card" />
-      <meta name="twitter:title" content={webTitle + title} key="tw_title" />
+      <meta name="twitter:title" content={title + webTitle} key="tw_title" />
+      <meta name="twitter:description" content={description} key="tw_desc" />
     </Head>
   );
 };

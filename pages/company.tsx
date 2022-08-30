@@ -1,19 +1,24 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
+import CommonMeta from "../components/common/meta/CommonMeta";
 import PageTitle from "../components/pagetitle/PageTitle";
 import styles from "../styles/Company.module.scss";
 
 const Company = () => {
+  const router = useRouter();
   return (
     <>
-      <Head>
-        <title>大丸白衣 | 会社概要</title>
-        <meta
-          name="description"
-          content="昭和6年、私たち大丸白衣は、その名の通り白衣専門店として大阪の地で創業しました。それから90余年、豊かで成熟した社会へと大きく様変わりしていく中で、私たちは白衣＝ユニフォームという広い視野に立ち、これまで培ってきた経験と伝統を基盤としながら、新たに果たすべき役割や可能性について問い続け、新たな商品開発を行ってきました。"
-        />
-      </Head>
+      <CommonMeta
+        title={"会社概要"}
+        siteName={""}
+        description={
+          "昭和6年、私たち大丸白衣は、その名の通り白衣専門店として大阪の地で創業しました。それから90余年、豊かで成熟した社会へと大きく様変わりしていく中で、私たちは白衣＝ユニフォームという広い視野に立ち、これまで培ってきた経験と伝統を基盤としながら、新たに果たすべき役割や可能性について問い続け、新たな商品開発を行ってきました。"
+        }
+        url={router.pathname}
+        type={""}
+      />
       <main>
         <section className={`m-full`}>
           <div className={`inner p-6 pb-0 mb-12`}>
