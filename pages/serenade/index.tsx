@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
+import CommonMeta from "../../components/common/meta/CommonMeta";
 import Information from "../../components/information/Information";
 import styles from "./Serenade.module.scss";
 
@@ -31,13 +33,19 @@ interface Props {
 }
 
 const Serenade: NextPage<Props> = ({ posts, images }) => {
+  const router = useRouter();
+
   return (
     <>
-      <Head>
-        <title>
-          Serenade | 強く、美しい人へ。メディカルウェアユニフォーム 大丸白衣
-        </title>
-      </Head>
+      <CommonMeta
+        title={"Serenade 強く、美しい人へ。メディカルウェアユニフォーム"}
+        siteName={""}
+        description={
+          "わたしたちは知っています。目の前の守るべき人を支えたい。力になりたい。その一心で、くる日もくる日もかけがえのない命と向き合っている。心と体にすべてでたたかっている、その姿を。そして、懸命な献身の内側にほんとうの美しさがあることを。貴方には、その美しさにふさわしいほんとうにいいものを身に着けてほしい。そんな思いを込めて、リスペクトとともにこの一着をお届けします。"
+        }
+        url={router.pathname}
+        type={"website"}
+      />
       <main>
         <div
           className={`${styles.serenadeContainer} mx-auto flex flex-col lg:flex-row mt-6`}

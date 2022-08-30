@@ -1,13 +1,20 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import Head from 'next/head';
-import React from 'react';
+import Head from "next/head";
+import { useRouter } from "next/router";
+import React from "react";
+import CommonMeta from "../components/common/meta/CommonMeta";
 
 const Recruit = () => {
+  const router = useRouter();
   return (
     <>
-      <Head>
-        <title>大丸白衣 | 採用情報</title>
-      </Head>
+      <CommonMeta
+        title={"採用情報"}
+        siteName={""}
+        description={"株式会社大丸白衣の採用情報ページです。"}
+        url={router.pathname}
+        type={""}
+      />
       <main>
         <section className={`m-full mb-28`}>
           <div className={`inner p-6`}>
