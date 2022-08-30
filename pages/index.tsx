@@ -4,6 +4,8 @@ import Head from "next/head";
 import Eyecatch from "../components/eyecatch/Eyecatch";
 import Information from "../components/information/Information";
 import Catalog from "../components/catalog/Catalog";
+import CommonMeta from "../components/common/meta/CommonMeta";
+import { useRouter } from "next/router";
 
 interface Props {
   posts: {
@@ -36,17 +38,19 @@ interface Props {
 }
 
 const Home: NextPage<Props> = ({ posts, images }) => {
+  const router = useRouter();
+
   return (
     <>
-      <Head>
-        <title>
-          大丸白衣 | 使いやすく機能性にあふれた白衣・ユニフォームをご提案！
-        </title>
-        <meta
-          name="description"
-          content="大丸白衣は食品業界向けユニフォーム、医療業界向け白衣、作業着、制服をご提案！異物混入対策や動きやすさにも対応。ユニフォームのレンタルも行っています。"
-        />
-      </Head>
+      <CommonMeta
+        title={"使いやすく機能性にあふれた白衣・ユニフォームをご提案！"}
+        siteName={""}
+        description={
+          "大丸白衣は食品業界向けユニフォーム、医療業界向け白衣、作業着、制服をご提案！異物混入対策や動きやすさにも対応。ユニフォームのレンタルも行っています。"
+        }
+        url={router.pathname}
+        type={"website"}
+      />
       <main>
         <Eyecatch images={images} />
         <Catalog images={images} />

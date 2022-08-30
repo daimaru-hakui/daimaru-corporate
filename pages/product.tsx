@@ -1,21 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
+import CommonMeta from "../components/common/meta/CommonMeta";
 import Handling from "../components/handling/Handling";
 import PageTitle from "../components/pagetitle/PageTitle";
 import styles from "../styles/product.module.scss";
 
 const Product = () => {
+  const router = useRouter();
   return (
     <>
-      <Head>
-        <title>大丸白衣 | 商品情報</title>
-      </Head>
-      <meta
-        name="description"
-        content="フードサービス、フードファクトリー、といった「食」にかかわるユニフォームや資材のブランドです。
-        食の安全を大切に、早くから制菌・抗菌や制電・防汚などの機能性素材を積極的に採用した製品づくりを行っています。多くのロングセラー商品を展開する安心のブランドです。"
+      <CommonMeta
+        title={"商品情報"}
+        siteName={""}
+        description={
+          "フードサービス、フードファクトリー、といった「食」にかかわるユニフォームや資材のブランドです。食の安全を大切に、早くから制菌・抗菌や制電・防汚などの機能性素材を積極的に採用した製品づくりを行っています。多くのロングセラー商品を展開する安心のブランドです。"
+        }
+        url={router.pathname}
+        type={""}
       />
+
       <main>
         <section className={`m-full mb-28`}>
           <div className={`inner p-6`}>
