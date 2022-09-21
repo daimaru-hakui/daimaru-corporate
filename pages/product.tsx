@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import CommonMeta from "../components/common/meta/CommonMeta";
@@ -50,18 +51,18 @@ const Product = () => {
                   <br />
                   食の安全を大切に、早くから制菌・抗菌や制電・防汚などの機能性素材を積極的に採用した製品づくりを行っています。多くのロングセラー商品を展開する安心のブランドです。
                 </p>
-                {/* <div className={`w-full text-center md:text-left`}>
+                <div className={`w-full text-center md:text-left`}>
                   <button>
-                    <Link href='/products'>
+                    <Link href="/products">
                       <a
-                        rel='noopener noreferrer'
+                        rel="noopener noreferrer"
                         className={`block text-sm border px-12 py-3 mt-12 hover:bg-black hover:text-white ease-in duration-200`}
                       >
                         商品一覧はこちら
                       </a>
                     </Link>
                   </button>
-                </div> */}
+                </div>
               </div>
             </div>
             <div
@@ -87,7 +88,7 @@ const Product = () => {
                   <br />
                   機能性素材はもちろんのこと、動きやすく着心地といった日々のお仕事に寄り添う製品づくりも行っています。
                 </p>
-                {/* <div className={`w-full text-center md:text-left`}>
+                <div className={`w-full text-center md:text-left`}>
                   <button>
                     <Link href="/products">
                       <a
@@ -98,7 +99,7 @@ const Product = () => {
                       </a>
                     </Link>
                   </button>
-                </div> */}
+                </div>
               </div>
             </div>
             {/* 取り扱いユニフォーム */}
