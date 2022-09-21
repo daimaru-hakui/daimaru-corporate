@@ -18,7 +18,7 @@ const CommonMeta: NextPage<Props> = ({
   type,
 }) => {
   const router = useRouter();
-  const webTitle = router.pathname === "/" ? "" : "｜株式会社大丸白衣 ";
+  const webTitle = router.pathname === "/" ? "" : "｜大丸白衣 ";
   return (
     <Head>
       <title>{title + webTitle}</title>

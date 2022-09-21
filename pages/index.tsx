@@ -44,7 +44,7 @@ const Home: NextPage<Props> = ({ posts, images }) => {
     <>
       <CommonMeta
         title={
-          "株式会社大丸白衣｜使いやすく機能性にあふれた白衣・ユニフォームをご提案！"
+          "大丸白衣｜使いやすく機能性にあふれた白衣・ユニフォームをご提案！"
         }
         siteName={""}
         description={
