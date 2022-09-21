@@ -280,7 +280,7 @@ const Company = () => {
                 </div>
               </li>
               <li className={styles.companyItem}>
-                <div className={styles.companyLeft}>令和1年9月</div>
+                <div className={styles.companyLeft}>令和元年9月</div>
                 <div className={styles.companyRight}>大丸白衣第二ビル完成</div>
               </li>
             </ul>
