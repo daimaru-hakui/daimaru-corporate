@@ -24,6 +24,10 @@
 }
 
 @media screen and (min-width: 900px) {
+  .catalogBody {
+    max-width: 650px;
+    margin: 0 auto;
+  }
   .catalogList {
     display: flex;
     flex-direction: row;

@@ -22,9 +22,9 @@ const Catalog: NextPage<Props> = ({ images }) => {
   return (
     <div className="w-full mt-20 pt-6">
       <div className="w-full text-center">
-        <h2 className="text-3xl font-bold">Original Brands</h2>
+        <h2 className="mb-2 text-3xl font-bold">Original Brands</h2>
       </div>
-      <div className={styles.catalogBody}>
+      <div className={`${styles.catalogBody}`}>
         <ul className={styles.catalogList}>
           <li className={`${styles.catalogItem} flex flex-col items-center`}>
             <a
@@ -59,6 +59,16 @@ const Catalog: NextPage<Props> = ({ images }) => {
             <h3 className="mt-2 font-bold text-sm">Medical Uniform</h3>
           </li>
         </ul>
+        <div className="p-3">
+          <div className="font-bold text-xs">
+            【デジタルカタログ使用についてのご注意】
+          </div>
+          <div className="text-xs">
+            本デジタルカタログは、構成、文章、画像、データ等の全てにおいて、著作権法上の保護を受けています。
+            <br />
+            本デジタルカタログの一部あるいは全部について、いかなる方法においても複写、複製等、著作権法上で規定された権利を侵害する行為をすることは禁じられています。
+          </div>
+        </div>
       </div>
     </div>
   );
