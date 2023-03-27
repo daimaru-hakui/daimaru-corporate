@@ -141,7 +141,7 @@ const Company = () => {
               <li className={styles.companyItem}>
                 <div className={styles.companyLeft}>取引銀行</div>
                 <div className={styles.companyRight}>
-                  三菱UFJ銀行 心斎橋支店　　
+                  三菱UFJ銀行 難波駅前支店　　
                   <br className={styles.companyBr} />
                   三井住友銀行 難波支店　　
                   <br className={styles.companyBr} />

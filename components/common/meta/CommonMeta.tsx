@@ -3,11 +3,11 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 type Props = {
-  siteName: string | null | undefined;
+  siteName?: string | null | undefined;
   title: string;
   description: string;
   url: string;
-  type: string | null;
+  type?: string | null;
 };
 
 const CommonMeta: NextPage<Props> = ({

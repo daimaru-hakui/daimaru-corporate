@@ -3,27 +3,10 @@
 import Head from "next/head";
 import React from "react";
 import PageTitle from "../components/pagetitle/PageTitle";
-import OpenInNewTwoToneIcon from "@mui/icons-material/OpenInNewTwoTone";
-import CloseIcon from "@mui/icons-material/Close";
-import Modal from "@mui/material/Modal";
-import { Box } from "@mui/system";
 import { NextPage } from "next";
 import CommonMeta from "../components/common/meta/CommonMeta";
 import { useRouter } from "next/router";
-
-const style = {
-  position: "absolute" as "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "100%",
-  maxWidth: "700px",
-  textAlign: "center",
-  bgcolor: "white",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: "0 15px 15px",
-};
+import { CarendarImage } from "../components/shop/CarendarImage";
 
 type Props = {
   images: {
@@ -38,22 +21,14 @@ type Props = {
 
 const Shop: NextPage<Props> = ({ images }) => {
   const router = useRouter();
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  const [openKobe, setOpenKobe] = React.useState(false);
-  const handleOpenKobe = () => setOpenKobe(true);
-  const handleCloseKobe = () => setOpenKobe(false);
   return (
     <>
       <CommonMeta
         title={"店舗情報"}
-        siteName={""}
         description={
           "〒542-0073 大阪市中央区日本橋2丁目4番17号 TEL:06-6641-4629 〒650-0021 神戸市中央区三宮町3丁目9番17号 078-391-4629"
         }
         url={router.pathname}
-        type={""}
       />
 
       <main>
@@ -75,42 +50,17 @@ const Shop: NextPage<Props> = ({ images }) => {
                   <div className="mt-1">CLOSED / 土（不定休）・日・祝</div>
                   <div className="mt-1">
                     ※土曜日の休日は下記{" "}
-                    <span
-                      onClick={handleOpen}
-                      className="underline cursor-pointer"
-                    >
-                      カレンダー
-                    </span>
+                    <CarendarImage
+                      title="カレンダー"
+                      images={images.calendarOsaka.url}
+                    />
                     をご確認ください
                   </div>
-                  <span
-                    className="mt-6 cursor-pointer inline-block underline hover:no-underline hover:text-gray-600"
-                    onClick={handleOpen}
-                  >
-                    <span className="mr-1 ">Calendar</span>
-                    <OpenInNewTwoToneIcon fontSize="small" />
-                  </span>
+                  <CarendarImage
+                    title="Calendar"
+                    images={images.calendarOsaka.url}
+                  />
                 </div>
-                <Modal
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                >
-                  <Box sx={style}>
-                    <div className="text-center p-3" onClick={handleClose}>
-                      <CloseIcon />
-                      <span className="text-sm">閉じる</span>
-                    </div>
-                    {images.calendarOsaka && (
-                      <img
-                        src={images.calendarOsaka.url}
-                        className="mx-auto"
-                        alt="カレンダー"
-                      />
-                    )}
-                  </Box>
-                </Modal>
                 <div className="mt-9">
                   <iframe
                     // className="grayscale"
@@ -137,42 +87,18 @@ const Shop: NextPage<Props> = ({ images }) => {
                   <div className="mt-1">CLOSED / 土（不定休）・日・祝</div>
                   <div className="mt-1">
                     ※土曜日の休日は下記
-                    <span
-                      onClick={handleOpenKobe}
-                      className="underline cursor-pointer"
-                    >
-                      カレンダー
-                    </span>
+                    <CarendarImage
+                      title="カレンダー"
+                      images={images.calendarKobe.url}
+                    />
                     をご確認ください
                   </div>
-                  <span
-                    className="mt-6 cursor-pointer inline-block underline hover:no-underline hover:text-gray-600"
-                    onClick={handleOpenKobe}
-                  >
-                    <span className="mr-1 ">Calendar</span>
-                    <OpenInNewTwoToneIcon fontSize="small" />
-                  </span>
+                  <CarendarImage
+                    title="Calendar"
+                    images={images.calendarKobe.url}
+                    icon={true}
+                  />
                 </div>
-                <Modal
-                  open={openKobe}
-                  onClose={handleCloseKobe}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                >
-                  <Box sx={style}>
-                    <div className="text-center p-3" onClick={handleCloseKobe}>
-                      <CloseIcon />
-                      <span className="text-sm">閉じる</span>
-                    </div>
-                    {images.calendarKobe && (
-                      <img
-                        src={images.calendarKobe.url}
-                        className="mx-auto"
-                        alt="カレンダー"
-                      />
-                    )}
-                  </Box>
-                </Modal>
                 <div className="mt-9">
                   <iframe
                     // className="grayscale"
