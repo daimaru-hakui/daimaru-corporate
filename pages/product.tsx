@@ -52,7 +52,7 @@ const Product = () => {
                   食の安全を大切に、早くから制菌・抗菌や制電・防汚などの機能性素材を積極的に採用した製品づくりを行っています。多くのロングセラー商品を展開する安心のブランドです。
                 </p>
                 <div className={`w-full text-center md:text-left`}>
-                  <button>
+                  {/* <button>
                     <Link href="/products">
                       <a
                         rel="noopener noreferrer"
@@ -61,7 +61,7 @@ const Product = () => {
                         商品一覧はこちら
                       </a>
                     </Link>
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
