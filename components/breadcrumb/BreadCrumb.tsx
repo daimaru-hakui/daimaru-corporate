@@ -9,24 +9,20 @@ const BreadCrumb: NextPage<any> = ({ category, productCode, productName }) => {
   return (
     <div className="flex text-xs">
       <div className="mr-4">
-        <Link href={"/"}>
-          <a>ホーム</a>
+        <Link href={"/"} passHref>
+          ホーム
         </Link>
       </div>
       <div className="mr-4">{`>`}</div>
-      <div className="mr-4">
-        <Link href={`/products/`}>
-          <a>商品一覧</a>
-        </Link>
-      </div>
+      <Link href={`/products/`} passHref>
+        <div className="mr-4">商品一覧</div>
+      </Link>
       {categoryName && (
         <>
           <div className="mr-4">{`>`}</div>
-          <div className="mr-4">
-            <Link href={`/products/${categorySlug}`}>
-              <a>{categoryName}</a>
-            </Link>
-          </div>
+          <Link href={`/products/${categorySlug}`} passHref>
+            <div className="mr-4">{categoryName}</div>
+          </Link>
         </>
       )}
       <div className="mr-4">{`>`}</div>

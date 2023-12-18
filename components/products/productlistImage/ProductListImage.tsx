@@ -31,12 +31,12 @@ const ProductListImage: NextPage<Props> = ({ product }) => {
     <div key={product.id} className='mt-6'>
       <div className='w-full'>
         {product.imagesColor && (
-          <Link href={`/products/${product.id}`}>
-            <a className='flex justify-center'>
+          <Link href={`/products/${product.id}`} passHref>
+            <div className='flex justify-center'>
               {product.imagesColor.map(
                 (image, index) =>
                   index == colorChange && (
-                    <img
+                    <img key={index}
                       src={`${image.image.url}?w=600&h=600`}
                       className='base:h-full sm:h-64 object-cover'
                     />
@@ -46,7 +46,7 @@ const ProductListImage: NextPage<Props> = ({ product }) => {
                 src={`${product.imagesColor[0].image.url}?w=600&h=600`}
                 className="base:h-full sm:h-64 object-cover"
               /> */}
-            </a>
+            </div>
           </Link>
         )}
       </div>

@@ -37,22 +37,22 @@ const Information: NextPage<Props> = ({ posts, directory }) => {
                   </time>
                   <i className={styles.cat}>{post.category}</i>
                 </span>
-                <p className={`${styles.title}`}>
-                  <Link href={`${directory}/${post.id}`}>
-                    <a>{post.title}</a>
+                <div className={`${styles.title}`}>
+                  <Link href={`${directory}/${post.id}`} passHref>
+                    <div>{post.title}</div>
                   </Link>
-                </p>
+                </div>
               </li>
             ))}
           </ul>
         </div>
         <div className={`${styles.infoBtn} border lg:absolute`}>
-          <Link href={directory}>
-            <a className="block text-center">
+          <Link href={directory} passHref>
+            <div className="block text-center">
               <button className="py-1 mx-auto lg:w-24 text-center">
                 一覧へ
               </button>
-            </a>
+            </div>
           </Link>
         </div>
       </div>

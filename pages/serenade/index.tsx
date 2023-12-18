@@ -132,14 +132,12 @@ const Serenade: NextPage<Props> = ({ posts, images }) => {
             <div
               className={`mx-auto border mt-12 lg:w-9/12 hover:opacity-90 ease-linear`}
             >
-              <Link href="/products">
-                <a>
-                  <img
-                    src="/images/banner-all-items.jpg"
-                    width="800px"
-                    alt="all items"
-                  />
-                </a>
+              <Link href="/products" passHref>
+                <img
+                  src="/images/banner-all-items.jpg"
+                  width="800px"
+                  alt="all items"
+                />
               </Link>
             </div>
           </div>

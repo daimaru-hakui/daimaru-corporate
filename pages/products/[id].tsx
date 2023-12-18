@@ -44,14 +44,14 @@ const ProductId = ({ item }: any) => {
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mt-8">
                       {item.relation.map((item: any) => (
                         <div key={item.id}>
-                          <Link href={`/products/${item.id}`}>
-                            <a className="flex flex-col">
+                          <Link href={`/products/${item.id}`} passHref>
+                            <div className="flex flex-col">
                               <img
                                 src={`${item.imagesColor[0].image.url}?W=300&H=300`}
                                 alt={item.productNumber}
                                 className="lg:w-44 lg:h-44 object-cover"
                               />
-                            </a>
+                            </div>
                           </Link>
                           <div className="text-xs mt-2">
                             <span className="mr-2">{item.productNumber}</span>

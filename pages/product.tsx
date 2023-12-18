@@ -90,13 +90,12 @@ const Product = () => {
                 </p>
                 <div className={`w-full text-center md:text-left`}>
                   <button>
-                    <Link href="/products">
-                      <a
-                        rel="noopener noreferrer"
+                    <Link href="/products" passHref>
+                      <div
                         className={`block text-sm border px-12 py-3 mt-12 hover:bg-black hover:text-white ease-in duration-200`}
                       >
                         商品一覧はこちら
-                      </a>
+                      </div>
                     </Link>
                   </button>
                 </div>
